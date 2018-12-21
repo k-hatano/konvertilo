@@ -26,7 +26,7 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/h[xX]/g,'ĥ');
 		enhavo = enhavo.replace(/j[xX]/g,'ĵ');
 		enhavo = enhavo.replace(/s[xX]/g,'ŝ');
-		enhavo = enhavo.replace(/[uvW][xX]/g,'ŭ');
+		enhavo = enhavo.replace(/[uvw][xX]/g,'ŭ');
 		enhavo = enhavo.replace(/C[xX]/g,'Ĉ');
 		enhavo = enhavo.replace(/G[xX]/g,'Ĝ');
 		enhavo = enhavo.replace(/H[xX]/g,'Ĥ');
@@ -41,7 +41,7 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/h[yY]/g,'ĥ');
 		enhavo = enhavo.replace(/j[yY]/g,'ĵ');
 		enhavo = enhavo.replace(/s[yY]/g,'ŝ');
-		enhavo = enhavo.replace(/[uvW][yY]/g,'ŭ');
+		enhavo = enhavo.replace(/[uvw][yY]/g,'ŭ');
 		enhavo = enhavo.replace(/C[yY]/g,'Ĉ');
 		enhavo = enhavo.replace(/G[yY]/g,'Ĝ');
 		enhavo = enhavo.replace(/H[yY]/g,'Ĥ');
@@ -56,7 +56,7 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/h\^/g,'ĥ');
 		enhavo = enhavo.replace(/j\^/g,'ĵ');
 		enhavo = enhavo.replace(/s\^/g,'ŝ');
-		enhavo = enhavo.replace(/[uvW][\^\~]/g,'ŭ');
+		enhavo = enhavo.replace(/[uvw][\^\~]/g,'ŭ');
 		enhavo = enhavo.replace(/C\^/g,'Ĉ');
 		enhavo = enhavo.replace(/G\^/g,'Ĝ');
 		enhavo = enhavo.replace(/H\^/g,'Ĥ');
@@ -82,13 +82,11 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/ĥ/g,'hh');
 		enhavo = enhavo.replace(/ĵ/g,'jh');
 		enhavo = enhavo.replace(/ŝ/g,'sh');
-		enhavo = enhavo.replace(/ŭ/g,'u');
 		enhavo = enhavo.replace(/Ĉ/g,'Ch');
 		enhavo = enhavo.replace(/Ĝ/g,'Gh');
 		enhavo = enhavo.replace(/Ĥ/g,'Hh');
 		enhavo = enhavo.replace(/Ĵ/g,'Jh');
 		enhavo = enhavo.replace(/Ŝ/g,'Sh');
-		enhavo = enhavo.replace(/Ŭ/g,'U');
 	}
 
 	if (x_sistemo) {

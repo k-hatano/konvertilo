@@ -137,6 +137,20 @@ function konvertuAlAscii() {
 	document.getElementById('enhavo').value = enhavo;
 }
 
+var fontSize = 12;
+document.getElementById('enhavo').style.fontSize = fontSize + 'px';
 
+function small() {
+	fontSize--;
+	if (fontSize <= 0) {
+		fontSize = 1;
+	}
+	document.getElementById('enhavo').style.fontSize = fontSize + 'px';
+}
+
+function large() {
+	fontSize++;
+	document.getElementById('enhavo').style.fontSize = fontSize + 'px';
+}
 
 

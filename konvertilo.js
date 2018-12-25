@@ -6,6 +6,7 @@ function konvertuAlEsperanto() {
 	var x_sistemo = document.getElementById('x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
+	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
 
 	if (h_sistemo) {
 		enhavo = enhavo.replace(/c[hH]/g,'ĉ');
@@ -65,6 +66,21 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/[UVW]\^/g,'Ŭ');
 	}
 
+	if (apostrophe_sistemo) {
+		enhavo = enhavo.replace(/c\'/g,'ĉ');
+		enhavo = enhavo.replace(/g\'/g,'ĝ');
+		enhavo = enhavo.replace(/h\'/g,'ĥ');
+		enhavo = enhavo.replace(/j\'/g,'ĵ');
+		enhavo = enhavo.replace(/s\'/g,'ŝ');
+		enhavo = enhavo.replace(/[uvw]\'/g,'ŭ');
+		enhavo = enhavo.replace(/C\'/g,'Ĉ');
+		enhavo = enhavo.replace(/G\'/g,'Ĝ');
+		enhavo = enhavo.replace(/H\'/g,'Ĥ');
+		enhavo = enhavo.replace(/J\'/g,'Ĵ');
+		enhavo = enhavo.replace(/S\'/g,'Ŝ');
+		enhavo = enhavo.replace(/[UVW]\'/g,'Ŭ');
+	}
+
 	document.getElementById('enhavo').value = enhavo;
 }
 
@@ -75,6 +91,7 @@ function konvertuAlAscii() {
 	var x_sistemo = document.getElementById('x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
+	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
 
 	if (h_sistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'ch');
@@ -134,23 +151,43 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/Ŭ/g,'U~');
 	}
 
+	if (apostrophe_sistemo) {
+		enhavo = enhavo.replace(/ĉ/g,'c\'');
+		enhavo = enhavo.replace(/ĝ/g,'g\'');
+		enhavo = enhavo.replace(/ĥ/g,'h\'');
+		enhavo = enhavo.replace(/ĵ/g,'j\'');
+		enhavo = enhavo.replace(/ŝ/g,'s\'');
+		enhavo = enhavo.replace(/ŭ/g,'u\'');
+		enhavo = enhavo.replace(/Ĉ/g,'C\'');
+		enhavo = enhavo.replace(/Ĝ/g,'G\'');
+		enhavo = enhavo.replace(/Ĥ/g,'H\'');
+		enhavo = enhavo.replace(/Ĵ/g,'J\'');
+		enhavo = enhavo.replace(/Ŝ/g,'S\'');
+		enhavo = enhavo.replace(/Ŭ/g,'U\'');
+	}
+
 	document.getElementById('enhavo').value = enhavo;
 }
 
-var fontSize = 12;
-document.getElementById('enhavo').style.fontSize = fontSize + 'px';
+var tiparaGrandeco = 12;
+document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 
-function small() {
-	fontSize--;
-	if (fontSize <= 0) {
-		fontSize = 1;
+function malgranda() {
+	tiparaGrandeco--;
+	if (tiparaGrandeco <= 0) {
+		tiparaGrandeco = 1;
 	}
-	document.getElementById('enhavo').style.fontSize = fontSize + 'px';
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
-function large() {
-	fontSize++;
-	document.getElementById('enhavo').style.fontSize = fontSize + 'px';
+function decdu() {
+	tiparaGrandeco = 12;
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+}
+
+function granda() {
+	tiparaGrandeco++;
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 

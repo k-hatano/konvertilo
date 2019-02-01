@@ -23,7 +23,8 @@ Adiaŭ!</textarea></p>
 
 <p>Sistemoj<br />
 <input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo (Zamenhofa sistemo)</label><br />
-<input type="checkbox" id="x_sistemo" checked="checked" /><label for="x_sistemo">X-sistemo</label><br />
+<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo</label><br />
+<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo (neoficiala)</label><br />
 <input type="checkbox" id="y_sistemo" checked="checked" /><label for="y_sistemo">Y-sistemo (neoficiala)</label><br />
 <input type="checkbox" id="kareto_sistemo" checked="checked" /><label for="kareto_sistemo">^-sistemo</label><br />
 <input type="checkbox" id="apostrophe_sistemo" checked="checked" /><label for="apostrophe_sistemo">'-sistemo (neoficiala)</label><br />

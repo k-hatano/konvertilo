@@ -15,19 +15,39 @@ Kiel vi nomiĝas?
 
 Adiaŭ!</textarea></p>
 
-<button id="to_esperanto" onclick="konvertuAlEsperanto();">Konvertu ASCII alfabeton al Esperanto alfabeto (ch -> ĉ)</button>
+<button id="to_esperanto" onclick="konvertuAlEsperanto();">Konvertu ASCII alfabeton al Esperanto alfabeto (ch &rarr; ĉ)</button>
 <br />
-<button id="to_ascii" onclick="konvertuAlAscii();">Konvertu Esperantan alfabeton al ASCII alfabeto (ĉ -> ch)</button>
+<button id="to_ascii" onclick="konvertuAlAscii();">Konvertu Esperantan alfabeton al ASCII alfabeto (ĉ &rarr; ch)</button>
 
 <br />
 
 <p>Sistemoj<br />
-<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo (Zamenhofa sistemo)</label><br />
-<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo</label><br />
-<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo (neoficiala)</label><br />
-<input type="checkbox" id="y_sistemo" checked="checked" /><label for="y_sistemo">Y-sistemo (neoficiala)</label><br />
-<input type="checkbox" id="kareto_sistemo" checked="checked" /><label for="kareto_sistemo">^-sistemo</label><br />
-<input type="checkbox" id="apostrophe_sistemo" checked="checked" /><label for="apostrophe_sistemo">'-sistemo (neoficiala)</label><br />
+
+<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo (Zamenhofa sistemo)<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
+
+<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="y_sistemo" checked="checked" /><label for="y_sistemo">Y-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="kareto_sistemo" checked="checked" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="apostrophe_sistemo" checked="checked" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+</p>
+
+<br />
+
+<p>Noto
+<table border="1" class="centro">
+	<tr>
+		<th>Alfabeto</th><td>c</td><td>ĉ</td><td>g</td><td>ĝ</td><td>h</td><td>ĥ</td><td>j</td><td>ĵ</td><td>s</td><td>ŝ</td><td>u</td><td>ŭ</td>
+	</tr>
+	<tr>
+		<th>Prononco</th><td>[ts]</td><td>[tʃ]</td><td>[g]</td><td>[dʒ]</td><td>[h]</td><td>[x]</td><td>[j]</td><td>[ʒ]</td><td>[s]</td><td>[ʃ]</td><td>[u]</td><td>[w]</td>
+	</tr>
+</table>
+Ligilo : <a href="https://en.wikipedia.org/wiki/Esperanto_orthography" target="_blank">https://en.wikipedia.org/wiki/Esperanto_orthography</a>
 </p>
 
 </body>

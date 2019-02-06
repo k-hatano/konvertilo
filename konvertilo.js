@@ -1,4 +1,10 @@
 
+var tiparaGrandeco = 12;
+
+onload = function() {
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+}
+
 function xSistemoKontrolita() {
 	var x_sistemo = document.getElementById('x_sistemo').checked;
 
@@ -18,12 +24,18 @@ function preXSistemoKontrolita() {
 function konvertuAlEsperanto() {
 	var enhavo = document.getElementById('enhavo').value;
 
+	var anstatauigo = document.getElementById('anstatauigo').checked;
 	var h_sistemo = document.getElementById('h_sistemo').checked;
 	var x_sistemo = document.getElementById('x_sistemo').checked;
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
 	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
+
+	if (anstatauigo) {
+		enhavo = enhavo.replace(/w/g,'ŭ');
+		enhavo = enhavo.replace(/W/g,'Ŭ');
+	}
 
 	if (h_sistemo) {
 		enhavo = enhavo.replace(/c[hH]/g,'ĉ');
@@ -119,12 +131,18 @@ function konvertuAlEsperanto() {
 function konvertuAlAscii() {
 	var enhavo = document.getElementById('enhavo').value;
 
+	var anstatauigo = document.getElementById('anstatauigo').checked;
 	var h_sistemo = document.getElementById('h_sistemo').checked;
 	var x_sistemo = document.getElementById('x_sistemo').checked;
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
 	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
+
+	if (anstatauigo) {
+		enhavo = enhavo.replace(/ŭ/g,'w');
+		enhavo = enhavo.replace(/Ŭ/g,'W');
+	}
 
 	if (h_sistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'ch');
@@ -216,9 +234,6 @@ function konvertuAlAscii() {
 
 	document.getElementById('enhavo').value = enhavo;
 }
-
-var tiparaGrandeco = 12;
-document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 
 function malgranda() {
 	tiparaGrandeco--;

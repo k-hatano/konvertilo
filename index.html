@@ -8,9 +8,10 @@
 
 <p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="decdu" onclick="decdu();">12</button><button id="granda" onclick="granda();">+</button></p>
 
-<textarea id="enhavo" class="enhavo" rows="24" cols="96">Mi estas tre ĝoja konatiĝi kun vi.
+<textarea id="enhavo" class="enhavo" rows="24" cols="96" style="">Mi estas tre ĝoja konatiĝi kun vi.
 Kiel vi nomiĝas?
 
+Mi ŝatas lerni lingvojn.
 Ĉu vi povas palori la anglan lingvon?
 
 Adiaŭ!</textarea></p>
@@ -23,17 +24,19 @@ Adiaŭ!</textarea></p>
 
 <p>Sistemoj<br />
 
+<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
+
 <input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo (Zamenhofa sistemo)<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
 
 <input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
 
 <input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="y_sistemo" checked="checked" /><label for="y_sistemo">Y-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
+<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="kareto_sistemo" checked="checked" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
+<input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="apostrophe_sistemo" checked="checked" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
 </p>
 
 <br />

@@ -30,7 +30,10 @@ function konvertuAlEsperanto() {
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
+	var pre_kareto_sistemo = document.getElementById('pre_kareto_sistemo').checked;
 	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
+	var pre_apostrophe_sistemo = document.getElementById('pre_apostrophe_sistemo').checked;
+	var angla_stila_sistemo = document.getElementById('angla_stila_sistemo').checked;
 
 	if (anstatauigo) {
 		enhavo = enhavo.replace(/w/g,'ŭ');
@@ -107,7 +110,22 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/H\^/g,'Ĥ');
 		enhavo = enhavo.replace(/J\^/g,'Ĵ');
 		enhavo = enhavo.replace(/S\^/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW]\^/g,'Ŭ');
+		enhavo = enhavo.replace(/[UVW][\^\~]/g,'Ŭ');
+	}
+
+	if (pre_kareto_sistemo) {
+		enhavo = enhavo.replace(/\^c/g,'ĉ');
+		enhavo = enhavo.replace(/\^g/g,'ĝ');
+		enhavo = enhavo.replace(/\^h/g,'ĥ');
+		enhavo = enhavo.replace(/\^j/g,'ĵ');
+		enhavo = enhavo.replace(/\^s/g,'ŝ');
+		enhavo = enhavo.replace(/[\^\~][uvw]/g,'ŭ');
+		enhavo = enhavo.replace(/\^C/g,'Ĉ');
+		enhavo = enhavo.replace(/\^G/g,'Ĝ');
+		enhavo = enhavo.replace(/\^H/g,'Ĥ');
+		enhavo = enhavo.replace(/\^J/g,'Ĵ');
+		enhavo = enhavo.replace(/\^S/g,'Ŝ');
+		enhavo = enhavo.replace(/[\^\~][UVW]/g,'Ŭ');
 	}
 
 	if (apostrophe_sistemo) {
@@ -125,6 +143,40 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/[UVW]\'/g,'Ŭ');
 	}
 
+	if (pre_apostrophe_sistemo) {
+		enhavo = enhavo.replace(/\'c/g,'ĉ');
+		enhavo = enhavo.replace(/\'g/g,'ĝ');
+		enhavo = enhavo.replace(/\'h/g,'ĥ');
+		enhavo = enhavo.replace(/\'j/g,'ĵ');
+		enhavo = enhavo.replace(/\'s/g,'ŝ');
+		enhavo = enhavo.replace(/\'[uvw]/g,'ŭ');
+		enhavo = enhavo.replace(/\'C/g,'Ĉ');
+		enhavo = enhavo.replace(/\'G/g,'Ĝ');
+		enhavo = enhavo.replace(/\'H/g,'Ĥ');
+		enhavo = enhavo.replace(/\'J/g,'Ĵ');
+		enhavo = enhavo.replace(/\'S/g,'Ŝ');
+		enhavo = enhavo.replace(/\'[UVW]/g,'Ŭ');
+	}
+
+	if (angla_stila_sistemo) {
+		enhavo = enhavo.replace(/c[hH]/g,'ĉ');
+		enhavo = enhavo.replace(/t[sS]/g,'c');
+		enhavo = enhavo.replace(/d[gG]/g,'ĝ');
+		enhavo = enhavo.replace(/k[hH]/g,'ĥ');
+		enhavo = enhavo.replace(/j/g,'ĵ');
+		enhavo = enhavo.replace(/y/g,'j');
+		enhavo = enhavo.replace(/s[hH]/g,'ŝ');
+		enhavo = enhavo.replace(/w/g,'ŭ');
+		enhavo = enhavo.replace(/C[hH]/g,'Ĉ');
+		enhavo = enhavo.replace(/T[sS]/g,'C');
+		enhavo = enhavo.replace(/D[gG]/g,'Ĝ');
+		enhavo = enhavo.replace(/K[hH]/g,'Ĥ');
+		enhavo = enhavo.replace(/J/g,'Ĵ');
+		enhavo = enhavo.replace(/Y/g,'J');
+		enhavo = enhavo.replace(/S[hH]/g,'Ŝ');
+		enhavo = enhavo.replace(/W/g,'Ŭ');
+	}
+
 	document.getElementById('enhavo').value = enhavo;
 }
 
@@ -137,7 +189,10 @@ function konvertuAlAscii() {
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var y_sistemo = document.getElementById('y_sistemo').checked;
 	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
+	var pre_kareto_sistemo = document.getElementById('pre_kareto_sistemo').checked;
 	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
+	var pre_apostrophe_sistemo = document.getElementById('pre_apostrophe_sistemo').checked;
+	var angla_stila_sistemo = document.getElementById('angla_stila_sistemo').checked;
 
 	if (anstatauigo) {
 		enhavo = enhavo.replace(/ŭ/g,'w');
@@ -217,6 +272,21 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/Ŭ/g,'U~');
 	}
 
+	if (pre_kareto_sistemo) {
+		enhavo = enhavo.replace(/ĉ/g,'^c');
+		enhavo = enhavo.replace(/ĝ/g,'^g');
+		enhavo = enhavo.replace(/ĥ/g,'^h');
+		enhavo = enhavo.replace(/ĵ/g,'^j');
+		enhavo = enhavo.replace(/ŝ/g,'^s');
+		enhavo = enhavo.replace(/ŭ/g,'~u');
+		enhavo = enhavo.replace(/Ĉ/g,'^C');
+		enhavo = enhavo.replace(/Ĝ/g,'^G');
+		enhavo = enhavo.replace(/Ĥ/g,'^H');
+		enhavo = enhavo.replace(/Ĵ/g,'^J');
+		enhavo = enhavo.replace(/Ŝ/g,'^S');
+		enhavo = enhavo.replace(/Ŭ/g,'~U');
+	}
+
 	if (apostrophe_sistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'c\'');
 		enhavo = enhavo.replace(/ĝ/g,'g\'');
@@ -232,6 +302,40 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/Ŭ/g,'U\'');
 	}
 
+	if (pre_apostrophe_sistemo) {
+		enhavo = enhavo.replace(/ĉ/g,'\'c');
+		enhavo = enhavo.replace(/ĝ/g,'\'g');
+		enhavo = enhavo.replace(/ĥ/g,'\'h');
+		enhavo = enhavo.replace(/ĵ/g,'\'j');
+		enhavo = enhavo.replace(/ŝ/g,'\'s');
+		enhavo = enhavo.replace(/ŭ/g,'\'u');
+		enhavo = enhavo.replace(/Ĉ/g,'\'C');
+		enhavo = enhavo.replace(/Ĝ/g,'\'G');
+		enhavo = enhavo.replace(/Ĥ/g,'\'H');
+		enhavo = enhavo.replace(/Ĵ/g,'\'J');
+		enhavo = enhavo.replace(/Ŝ/g,'\'S');
+		enhavo = enhavo.replace(/Ŭ/g,'\'U');
+	}
+
+	if (angla_stila_sistemo) {
+		enhavo = enhavo.replace(/c/g,'ts');
+		enhavo = enhavo.replace(/ĉ/g,'ch');
+		enhavo = enhavo.replace(/ĝ/g,'dg');
+		enhavo = enhavo.replace(/ĥ/g,'kh');
+		enhavo = enhavo.replace(/j/g,'y');
+		enhavo = enhavo.replace(/ĵ/g,'j');
+		enhavo = enhavo.replace(/ŝ/g,'sh');
+		enhavo = enhavo.replace(/ŭ/g,'w');
+		enhavo = enhavo.replace(/C/g,'Ts');
+		enhavo = enhavo.replace(/Ĉ/g,'Ch');
+		enhavo = enhavo.replace(/Ĝ/g,'Dg');
+		enhavo = enhavo.replace(/Ĥ/g,'Kh');
+		enhavo = enhavo.replace(/J/g,'Y');
+		enhavo = enhavo.replace(/Ĵ/g,'J');
+		enhavo = enhavo.replace(/Ŝ/g,'Sh');
+		enhavo = enhavo.replace(/Ŭ/g,'W');
+	}
+
 	document.getElementById('enhavo').value = enhavo;
 }
 
@@ -243,8 +347,18 @@ function malgranda() {
 	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
-function decdu() {
+function dekdu() {
 	tiparaGrandeco = 12;
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+}
+
+function dekkvar() {
+	tiparaGrandeco = 14;
+	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+}
+
+function dekok() {
+	tiparaGrandeco = 18;
 	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 

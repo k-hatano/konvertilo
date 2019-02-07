@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="decdu" onclick="decdu();">12</button><button id="granda" onclick="granda();">+</button></p>
+<p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="dekdu" onclick="dekdu();">12</button><button id="dekkvar" onclick="dekkvar();">14</button><button id="dekok" onclick="dekok();">18</button><button id="granda" onclick="granda();">+</button></p>
 
 <textarea id="enhavo" class="enhavo" rows="24" cols="96" style="">Mi estas tre ĝoja konatiĝi kun vi.
 Kiel vi nomiĝas?
@@ -26,7 +26,7 @@ Adiaŭ!</textarea></p>
 
 <input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo (Zamenhofa sistemo)<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
+<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
 
 <input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
 
@@ -36,7 +36,13 @@ Adiaŭ!</textarea></p>
 
 <input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
 
+<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
+
 <input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(neoficiala, neinversigebla)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
 </p>
 
 <br />

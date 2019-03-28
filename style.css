@@ -16,3 +16,12 @@
 .centro {
 	text-align: center;
 }
+
+.juliamo {
+	font-family: juliamo;
+}
+
+@font-face {
+  font-family: 'juliamo';
+  src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff') format('woff');
+}

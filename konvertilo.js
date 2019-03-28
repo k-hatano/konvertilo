@@ -548,4 +548,14 @@ function granda() {
 	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
+function uzuJuliamoTiparon() {
+	var juliamo = document.getElementById('juliamo').checked;
+	var enhavo = document.getElementById('enhavo');
+	if (juliamo) {
+		enhavo.setAttribute('class', 'juliamo');
+	} else {
+		enhavo.removeAttribute('class', 'juliamo');
+	}
+}
+
 

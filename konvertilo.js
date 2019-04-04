@@ -1,8 +1,75 @@
 
 var tiparaGrandeco = 12;
 
+var ordinaj = [
+	'nuloa',
+	'unua',
+	'dua',
+	'tria',
+	'kvara',
+	'kvina',
+	'sesa',
+	'sepa',
+	'oka',
+	'naŭa',
+	'deka',
+	'dek-unua',
+	'dek-dua',
+	'dek-tria',
+	'dek-kvara',
+	'dek-kvina',
+	'dek-sesa',
+	'dek-sepa',
+	'dek-oka',
+	'dek-naŭa',
+	'dudeka',
+	'dudek-unua',
+	'dudek-dua',
+	'dudek-tria',
+	'dudek-kvara',
+	'dudek-kvina',
+	'dudek-sesa',
+	'dudek-sepa',
+	'dudek-oka',
+	'dudek-naŭa',
+	'trideka',
+	'tridek-unua',
+];
+
+var monatoj = [
+	'nuloa',
+	'januaro',
+	'februaro',
+	'marto',
+	'aprilo',
+	'majo',
+	'junio',
+	'julio',
+	'aŭgusto',
+	'septembro',
+	'oktobro',
+	'novembro',
+	'decembro',
+];
+
 onload = function() {
 	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+
+	var enhavo = document.getElementById('enhavo').value;
+	document.getElementById('enhavo').value = hodiaux() + "\r\r" + enhavo; 
+}
+
+function hodiaux() {
+	var rezulto = 'Hodiaŭ estas la ';
+
+	var nun = new Date();
+	var monato = nun.getMonth() + 1;
+	var tago = nun.getDate();
+
+	rezulto += ordinaj[tago] + ' de ';
+	rezulto += monatoj[monato] + '.';
+
+	return rezulto;
 }
 
 function xSistemoKontrolita() {
@@ -343,11 +410,11 @@ function katakanigo() {
 	var enhavo = document.getElementById('enhavo').value;
 
 	enhavo = enhavo.replace(/[Bb][Aa]/g,'バ');
-	enhavo = enhavo.replace(/[Bb][Ii]/g,'ベ');
-	enhavo = enhavo.replace(/[Bb][Uu]/g,'ビ');
-	enhavo = enhavo.replace(/[Bb][Ee]/g,'ボ');
-	enhavo = enhavo.replace(/[Bb][Oo]/g,'ブ');
-	enhavo = enhavo.replace(/[Bb]/g,'ㇷ゛');
+	enhavo = enhavo.replace(/[Bb][Ii]/g,'ビ');
+	enhavo = enhavo.replace(/[Bb][Uu]/g,'ブ');
+	enhavo = enhavo.replace(/[Bb][Ee]/g,'ベ');
+	enhavo = enhavo.replace(/[Bb][Oo]/g,'ボ');
+	enhavo = enhavo.replace(/[Bb]/g,'ㇷ゙');
 
 	enhavo = enhavo.replace(/[Cc][Aa]/g,'ツァ');
 	enhavo = enhavo.replace(/[Cc][Ii]/g,'ツィ');
@@ -368,7 +435,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Dd][Uu]/g,'ドゥ');
 	enhavo = enhavo.replace(/[Dd][Ee]/g,'デ');
 	enhavo = enhavo.replace(/[Dd][Oo]/g,'ド');
-	enhavo = enhavo.replace(/[Dd]/g,'ㇳ゛');
+	enhavo = enhavo.replace(/[Dd]/g,'ㇳ゙');
 
 	enhavo = enhavo.replace(/[Ff][Aa]/g,'ファ');
 	enhavo = enhavo.replace(/[Ff][Ii]/g,'フィ');
@@ -382,14 +449,14 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Gg][Uu]/g,'グ');
 	enhavo = enhavo.replace(/[Gg][Ee]/g,'ゲ');
 	enhavo = enhavo.replace(/[Gg][Oo]/g,'ゴ');
-	enhavo = enhavo.replace(/[Gg]/g,'ㇰ゛');
+	enhavo = enhavo.replace(/[Gg]/g,'ㇰ゙');
 
 	enhavo = enhavo.replace(/[Ĝĝ][Aa]/g,'ヂャ');
 	enhavo = enhavo.replace(/[Ĝĝ][Ii]/g,'ヂ');
 	enhavo = enhavo.replace(/[Ĝĝ][Uu]/g,'ヂュ');
 	enhavo = enhavo.replace(/[Ĝĝ][Ee]/g,'ヂェ');
 	enhavo = enhavo.replace(/[Ĝĝ][Oo]/g,'ヂョ');
-	enhavo = enhavo.replace(/[Ĝĝ]/g,'ㇱ゛');
+	enhavo = enhavo.replace(/[Ĝĝ]/g,'ㇱ゙');
 
 	enhavo = enhavo.replace(/[Hh][Aa]/g,'ハ');
 	enhavo = enhavo.replace(/[Hh][Ii]/g,'ヒ');
@@ -417,7 +484,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Ĵĵ][Uu]/g,'ジュ');
 	enhavo = enhavo.replace(/[Ĵĵ][Ee]/g,'ジェ');
 	enhavo = enhavo.replace(/[Ĵĵ][Oo]/g,'ジョ');
-	enhavo = enhavo.replace(/[Ĵĵ]/g,'ㇱ゛');
+	enhavo = enhavo.replace(/[Ĵĵ]/g,'ㇱ゙');
 
 	enhavo = enhavo.replace(/[Kk][Aa]/g,'カ');
 	enhavo = enhavo.replace(/[Kk][Ii]/g,'キ');
@@ -459,7 +526,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Rr][Uu]/g,'ル');
 	enhavo = enhavo.replace(/[Rr][Ee]/g,'レ');
 	enhavo = enhavo.replace(/[Rr][Oo]/g,'ロ');
-	enhavo = enhavo.replace(/[Rr]/g,'ㇽ');
+	enhavo = enhavo.replace(/[Rr]/g,'ㇻ');
 
 	enhavo = enhavo.replace(/[Ss][Aa]/g,'サ');
 	enhavo = enhavo.replace(/[Ss][Ii]/g,'スィ');
@@ -494,7 +561,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Vv][Uu]/g,'ヴ');
 	enhavo = enhavo.replace(/[Vv][Ee]/g,'ヹ');
 	enhavo = enhavo.replace(/[Vv][Oo]/g,'ヺ');
-	enhavo = enhavo.replace(/[Vv]/g,'ゥ゛');
+	enhavo = enhavo.replace(/[Vv]/g,'ゥ゙');
 
 	enhavo = enhavo.replace(/[Zz][Aa]/g,'ザ');
 	enhavo = enhavo.replace(/[Zz][Ii]/g,'ズィ');
@@ -552,9 +619,9 @@ function uzuJuliamoTiparon() {
 	var juliamo = document.getElementById('juliamo').checked;
 	var enhavo = document.getElementById('enhavo');
 	if (juliamo) {
-		enhavo.setAttribute('class', 'juliamo');
+		enhavo.setAttribute('class', 'juliamo enhavo');
 	} else {
-		enhavo.removeAttribute('class', 'juliamo');
+		enhavo.setAttribute('class', 'enhavo');
 	}
 }
 

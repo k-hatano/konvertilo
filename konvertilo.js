@@ -1,4 +1,10 @@
 
+var vera = true;
+var falsa = false;
+
+var alfabetoj = "ABCĈDEFGĜHĤIJĴKLMNOPQRSŜTUŬVWXYZabcĉdefgĝhĥijĵklmnopqrsŝtuŭvwxyz";
+var vokaloj = "AEIOUaeiou";
+
 var tiparaGrandeco = 12;
 
 var ordinaj = [
@@ -470,8 +476,54 @@ function konvertuAlAscii() {
 	document.getElementById('enhavo').value = enhavo;
 }
 
+function aldonuStreketonPostAkcyento(vorto) {
+	var flago = falsa;
+	var streketon = '-';
+	var konsonantoj = 0;
+
+	for (var i = vorto.length - 1; i >= 0; i--) {
+		if (vokaloj.indexOf(vorto.charAt(i)) >= 0) {
+			if (flago) {
+				if (konsonantoj < 2) {
+					i++;
+					var antawe = vorto.slice(0, i);
+					var poste = vorto.slice(i);
+					return antawe + streketon + poste;
+				} else {
+					return vorto;
+				}
+			} else {
+				flago = vera;
+			}
+			konsonantoj = 0;
+		} else {
+			konsonantoj++;
+		}
+	}
+	return vorto;
+}
+
 function katakanigo() {
 	var enhavo = document.getElementById('enhavo').value;
+	var rezulto = "";
+
+	enhavo = enhavo.replace(/\-/g,'');
+
+	for (var i = 0; i < enhavo.length; i++) {
+		var vorto = "";
+		var karaktero = enhavo.charAt(i);
+		if (alfabetoj.indexOf(karaktero) >= 0) {
+			while (i < enhavo.length && alfabetoj.indexOf(enhavo.charAt(i)) >= 0) {
+				vorto += enhavo.charAt(i);
+				i++;
+			}
+			i--;
+			rezulto += aldonuStreketonPostAkcyento(vorto);
+		} else {
+			rezulto += karaktero;
+		}
+	}
+	enhavo = rezulto;
 
 	enhavo = enhavo.replace(/[Bb][Aa]/g,'バ');
 	enhavo = enhavo.replace(/[Bb][Ii]/g,'ビ');
@@ -647,6 +699,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/\!/g,'！');
 
 	enhavo = enhavo.replace(/[Xx]/g,'?');
+	enhavo = enhavo.replace(/\-/g,'ー');
 
 	document.getElementById('enhavo').value = enhavo;
 }

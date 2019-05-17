@@ -736,9 +736,9 @@ function uzuJuliamoTiparon() {
 	var juliamo = document.getElementById('juliamo').checked;
 	var enhavo = document.getElementById('enhavo');
 	if (juliamo) {
-		enhavo.setAttribute('class', 'juliamo enhavo');
+		enhavo.classList.toggle('juliamo');
 	} else {
-		enhavo.setAttribute('class', 'enhavo');
+		enhavo.classList.toggle('juliamo');
 	}
 }
 

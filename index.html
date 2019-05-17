@@ -1,69 +1,125 @@
-<html>
+<!DOCTYPE html>
+<html lang="eo">
 <head>
-<meta charset="UTF-8" />
-<script type="text/javascript" charset="utf-8" src="konvertilo.js"></script>
-<link rel="stylesheet" charset="utf-8" type="text/css" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="konvertilo.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Konvertilo</title>
 </head>
 <body>
-
-<p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="dekdu" onclick="dekdu();">12</button><button id="dekkvar" onclick="dekkvar();">14</button><button id="dekok" onclick="dekok();">18</button><button id="granda" onclick="granda();">+</button>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="juliamo" onclick="uzuJuliamoTiparon(this.value);" /><label for="juliamo" class="juliamo">Uzu juliamo tiparon</label></p>
-
-<textarea id="enhavo" class="enhavo">Mi estas tre ĝoja konatiĝi kun vi.
-Kiel vi nomiĝas?
+  <header class="header">
+    <h1 class="header__title">Konvertilo</h1>
+    <a href="#sistemo" class="toggle"><img class="header__menuo" src="./img/toggle.svg" alt="Menua butono"></a>
+  </header>
+  <div class="container">
+    <main class="main">
+      <section class="grandeco">
+        <p class="grandeco__teksto">Tipara Grandeco:</p>
+        <button class="grandeco__butono"  id="malgranda" onclick="malgranda();">-</button>
+        <button class="grandeco__butono"  id="dekdu" onclick="dekdu();">12</button>
+        <button class="grandeco__butono"  id="dekkvar" onclick="dekkvar();">14</button>
+        <button class="grandeco__butono" id="dekok" onclick="dekok();">18</button>
+        <button class="grandeco__butono" id="granda" onclick="granda();">+</button>
+      </section>
+      <section class="enhavo">
+        <div class="enhavo__juliamo">
+          <input type="checkbox" id="juliamo" onclick="uzuJuliamoTiparon(this.value);" />
+          <label for="juliamo" class="juliamo">Uzu juliamo tiparon</label>
+        </div>
+        <textarea name="enhavo" id="enhavo" class="enhavo__teksto">
+ Kiel vi nomiĝas?
 
 Mi ŝatas lerni lingvojn.
 Ĉu vi povas paroli la anglan lingvon?
 
-Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
-
-<button id="to_esperanto" onclick="konvertuAlEsperanto();">Konvertu ASCII alfabeton al Esperanto alfabeto (ch &rarr; ĉ)</button>
-<br />
-<button id="to_ascii" onclick="konvertuAlAscii();">Konvertu Esperantan alfabeton al ASCII alfabeto (ĉ &rarr; ch)</button>
-<br />
-<button id="katakanigo" onclick="katakanigo();">Katakanigo (ĉa &rarr; チャ, neinversigebla)</button>
-
-<br />
-
-<p>Sistemoj<br />
-
-<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="grekaj" /><label for="grekaj">Anstataŭado de grekaj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &phi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
-
-<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="w_sistemo" /><label for="w_sistemo">W-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(neoficiala, ne konvertu dufoje)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
-</p>
-
-<br />
-
-<p>Noto
-<table border="1" class="centro">
-	<tr>
-		<th>Alfabeto</th><td>c</td><td>ĉ</td><td>g</td><td>ĝ</td><td>h</td><td>ĥ</td><td>j</td><td>ĵ</td><td>s</td><td>ŝ</td><td>u</td><td>ŭ</td>
-	</tr>
-	<tr>
-		<th>Prononco</th><td>[ts]</td><td>[tʃ]</td><td>[g]</td><td>[dʒ]</td><td>[h]</td><td>[x]</td><td>[j]</td><td>[ʒ]</td><td>[s]</td><td>[ʃ]</td><td>[u]</td><td>[w]</td>
-	</tr>
-</table>
-Ligilo : <a href="https://en.wikipedia.org/wiki/Esperanto_orthography" target="_blank">https://en.wikipedia.org/wiki/Esperanto_orthography</a>
-</p>
-
+Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea>
+        <div class="enhavo__agordo">
+          <button class="enhavo__butono" id="to_esperanto" onclick="konvertuAlEsperanto();">Konvertu ASCII alfabeton al Esperanto alfabeto (ch &rarr; ĉ)</button>
+          <br />
+          <button class="enhavo__butono" id="to_ascii" onclick="konvertuAlAscii();">Konvertu Esperantan alfabeton al ASCII alfabeto (ĉ &rarr; ch)</button>
+          <br />
+          <button class="enhavo__butono" id="katakanigo" onclick="katakanigo();">Katakanigo (ĉa &rarr; チャ, neinversigebla)</button>
+        </div>
+      </section>
+  		<section class="alfabeto">
+  			<table class="alfabeto__tabelo" >
+  					<tr>
+  						<th>Alfabeto</th><td>c</td><td>ĉ</td><td>g</td><td>ĝ</td><td>h</td><td>ĥ</td><td>j</td><td>ĵ</td><td>s</td><td>ŝ</td><td>u</td><td>ŭ</td>
+  					</tr>
+  					<tr>
+  						<th>Prononco</th><td>[ts]</td><td>[tʃ]</td><td>[g]</td><td>[dʒ]</td><td>[h]</td><td>[x]</td><td>[j]</td><td>[ʒ]</td><td>[s]</td><td>[ʃ]</td><td>[u]</td><td>[w]</td>
+  					</tr>
+  			</table>
+  		</section>
+    </main>
+    <aside id="sistemo" class="sistemo">
+      <a href="#" class="sistemo__fermi">X</a>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="anstatauigo" />
+        <label for="anstatauigo" class="sistemo__label">Anstataŭigo de ne uzataj alfabetoj <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">w &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="grekaj"/>
+        <label for="grekaj" class="sistemo__label">Anstataŭado de grekaj alfabetoj <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &phi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="h_sistemo" checked="checked" />
+        <label for="h_sistemo" class="sistemo__label">H-sistemo</label>
+        <p class="sistemo__ekz">ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" />
+        <label for="x_sistemo" class="sistemo__label">X-sistemo</label>
+        <p class="sistemo__ekz">cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" />
+        <label for="pre_x_sistemo" class="sistemo__label">Prefala X-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="w_sistemo" />
+        <label for="w_sistemo" class="sistemo__label">W-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="y_sistemo" />
+        <label for="y_sistemo" class="sistemo__label">Y-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="kareto_sistemo" />
+        <label for="kareto_sistemo" class="sistemo__label">^-sistemo</label>
+        <p class="sistemo__ekz">c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="pre_kareto_sistemo" />
+        <label for="pre_kareto_sistemo" class="sistemo__label">Prefala ^-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="apostrophe_sistemo" />
+        <label for="apostrophe_sistemo" class="sistemo__label">'-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="pre_apostrophe_sistemo" />
+        <label for="pre_apostrophe_sistemo" class="sistemo__label">Prefala '-sistemo <span class="oblikva">(neoficiala)</span></label>
+        <p class="sistemo__ekz">'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</p>
+      </div>
+      <div class="sistemo__listerajxo">
+        <input type="checkbox" class="sistemo__input" id="angla_stila_sistemo" />
+        <label for="angla_stila_sistemo" class="sistemo__label">Angla-stila sistemo <span class="oblikva">(neoficiala, ne konvertu dufoje)</p></label>
+        <p class="sistemo__ekz">ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</p>
+      </div>
+    </aside>
+  </div>
+  <footer class="footer">
+    <a class="footer__link" href="http://github.com"><img class="footer__img" src="./img/github.svg" alt="logo de github"></a>
+  </footer>
 </body>
 </html>

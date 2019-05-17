@@ -1,27 +1,245 @@
-
-.enhavo {
-	width: 600px;
-	height: 300px;
+*::before, *::after, * { 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	margin: 0; padding: 0; 
 }
 
-.malgranda {
-	font-size: small;
-	color: #888;
+:root { 
+	--unuaKoloro: #2bba2b; 
+	--unuaKoloroMalluma: #2f8631; 
+	--duaKoloro: #3af8fd; 
+	--duaKoloroMalluma: #10a8e1; 
 }
 
-.oblikva {
-	font-style: oblique;
+body { 
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 }
 
-.centro {
-	text-align: center;
+.header { 
+	position: relative; 
+	height: 60px; 
+	width: 100%; 
+	padding: 0 20px; 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex; 
+	-webkit-box-pack: justify; 
+	-ms-flex-pack: justify; 
+	justify-content: space-between; 
+	-webkit-box-align: center; 
+	-ms-flex-align: center; 
+	align-items: center; 
+	background-color: var(--unuaKoloro); 
 }
 
-.juliamo {
-	font-family: juliamo;
+.header__title { 
+	font-size: 32px; 
+	line-height: 1.6; 
+	text-align: center; 
+	color: white; 
 }
 
-@font-face {
-  font-family: 'juliamo';
-  src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff') format('woff');
+.toggle, .header__menuo { 
+	cursor: pointer; 
+}
+
+.container { 
+	width: 100vw; 
+	overflow: hidden; 
+}
+
+.sistemo { 
+	position: fixed; 
+	top: 0; 
+	left: 150vw; 
+	width: 100vw; 
+	height: 100vh; 
+	padding-top: 10px; 
+	background-color: var(--duaKoloroMalluma); 
+	overflow: scroll; 
+	-webkit-transition: left ease-in-out .5s; 
+	transition: left ease-in-out .5s; 
+}
+
+.sistemo:target { 
+	left: 0px; 
+}
+
+.sistemo__fermi { 
+	width: 100%; 
+	display: block; 
+	color: white; 
+	font-weight: bold; 
+	text-decoration: none; 
+	font-size: 30px; 
+	text-align: right; 
+	padding-right: 20px; 
+	padding-bottom: 5px; 
+}
+
+.sistemo__listerajxo { 
+	padding: 10px 20px; 
+	border-bottom: 1px solid white; 
+}
+
+.sistemo__listerajxo:first-of-type { 
+	border-top: 1px solid white; 
+}
+
+.sistemo__input { 
+	margin-right: 15px; 
+}
+
+.sistemo__label { 
+	color: white; 
+	font-weight: bold; 
+}
+
+.sistemo__ekz { 
+	font-size: small; 
+	color: white; 
+}
+
+.grandeco { 
+	height: 50px; 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex; 
+	-webkit-box-orient: horizontal; 
+	-webkit-box-direction: normal; 
+	-ms-flex-direction: row; 
+	flex-direction: row; 
+	-webkit-box-pack: justify; 
+	-ms-flex-pack: justify; 
+	justify-content: space-between; 
+	-webkit-box-align: center; 
+	-ms-flex-align: center; 
+	align-items: center; 
+	padding: 0 20px; 
+	background-color: var(--duaKoloroMalluma); 
+}
+
+.grandeco__teksto { 
+	color: white; 
+}
+
+.grandeco__butono {
+	width: 40px; 
+	height: 40px; 
+	background-color: transparent; 
+	border: 2px solid white; 
+	border-radius: 100%; 
+	color: white; 
+}
+
+.enhavo { 
+	height: 600px; 
+	background-color: var(--duaKoloro); 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex; 
+	-webkit-box-orient: vertical; 
+	-webkit-box-direction: normal; 
+	-ms-flex-direction: column; 
+	flex-direction: column; 
+	-webkit-box-pack: space-evenly; 
+	-ms-flex-pack: space-evenly; 
+	justify-content: space-evenly; 
+	-webkit-box-align: center; 
+	-ms-flex-align: center; 
+	align-items: center; 
+	text-align: center; 
+}
+
+.enhavo__juliamo { 
+	color: var(--duaKoloroMalluma); 
+	font-weight: bold; 
+	font-size: 18px; 
+}
+
+.enhavo__teksto { 
+	margin-bottom: 5px; 
+	height: 400px; 
+	width: 90%; 
+	border: none; 
+	border-radius: 20px; 
+	padding: 15px; 
+}
+
+.enhavo__agordo { 
+	margin-bottom: 5px; 
+}
+
+.enhavo__butono { 
+	margin: 5px auto; 
+	padding: 10px; 
+	background-color: var(--unuaKoloro); 
+	border: none; 
+	border-radius: 20px; 
+	color: white; 
+	font-weight: bold; 
+	cursor: pointer; 
+}
+
+.enhavo__butono:hover { 
+	background-color: var(--duaKoloroMalluma); 
+}
+
+.alfabeto { 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex; 
+	-webkit-box-pack: center; 
+	-ms-flex-pack: center; 
+	justify-content: center; 
+	background-color: var(--duaKoloroMalluma); 
+	color: white; 
+}
+
+.alfabeto__tabelo { 
+	border: 1px solid white; 
+	border-collapse: collapse; 
+}
+
+.alfabeto__tabelo td { 
+	border: 1px solid white; 
+	padding: 5px; 
+}
+
+.footer { 
+	height: 100px; 
+	display: -webkit-box; 
+	display: -ms-flexbox; 
+	display: flex; 
+	-webkit-box-pack: center; 
+	-ms-flex-pack: center; 
+	justify-content: center; 
+	-webkit-box-align: center; 
+	-ms-flex-align: center; 
+	align-items: center; 
+	background-color: var(--unuaKoloroMalluma); 
+}
+
+.oblikva { 
+	font-style: oblique; 
+}
+
+.juliamo { 
+	font-family: juliamo; 
+}
+
+@font-face { 
+	font-family: 'juliamo'; src: url("https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff") format("woff"); 
+}
+
+@media screen and (min-width: 769px) { 
+	.sistemo { 
+		width: 30%; font-size: 14px; 
+	}
+  .sistemo:target { 
+		left: calc(100vw - 30%); 
+	}
+  .enhavo__teksto { 
+		width: 50%; 
+	} 
 }

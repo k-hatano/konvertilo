@@ -282,6 +282,21 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/W/g,'Ŭ');
 	}
 
+	if (malregula_sistemo) {
+		enhavo = enhavo.replace(/c[yY]/g,'ĉ');
+		enhavo = enhavo.replace(/x[gG]/g,'ĝ');
+		enhavo = enhavo.replace(/q[hH]/g,'ĥ');
+		enhavo = enhavo.replace(/x[jJ]/g,'ĵ');
+		enhavo = enhavo.replace(/s[yY]/g,'ŝ');
+		enhavo = enhavo.replace(/w/g,'ŭ');
+		enhavo = enhavo.replace(/C[yY]/g,'Ĉ');
+		enhavo = enhavo.replace(/X[gG]/g,'Ĝ');
+		enhavo = enhavo.replace(/Q[hH]/g,'Ĥ');
+		enhavo = enhavo.replace(/X[jJ]/g,'Ĵ');
+		enhavo = enhavo.replace(/S[yY]/g,'Ŝ');
+		enhavo = enhavo.replace(/W/g,'Ŭ');
+	}
+
 	document.getElementById('enhavo').value = enhavo;
 }
 
@@ -470,6 +485,21 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/J/g,'Y');
 		enhavo = enhavo.replace(/Ĵ/g,'J');
 		enhavo = enhavo.replace(/Ŝ/g,'Sh');
+		enhavo = enhavo.replace(/Ŭ/g,'W');
+	}
+
+	if (malregula_sistemo) {
+		enhavo = enhavo.replace(/ĉ/g,'cy');
+		enhavo = enhavo.replace(/ĝ/g,'xg');
+		enhavo = enhavo.replace(/ĥ/g,'qh');
+		enhavo = enhavo.replace(/ĵ/g,'xj');
+		enhavo = enhavo.replace(/ŝ/g,'sy');
+		enhavo = enhavo.replace(/ŭ/g,'w');
+		enhavo = enhavo.replace(/Ĉ/g,'Cy');
+		enhavo = enhavo.replace(/Ĝ/g,'Xg');
+		enhavo = enhavo.replace(/Ĥ/g,'Qh');
+		enhavo = enhavo.replace(/Ĵ/g,'Xj');
+		enhavo = enhavo.replace(/Ŝ/g,'Sy');
 		enhavo = enhavo.replace(/Ŭ/g,'W');
 	}
 

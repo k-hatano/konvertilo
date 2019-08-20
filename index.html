@@ -24,31 +24,38 @@ Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 
 <br />
 
-<p>Sistemoj<br />
-
-<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="grekaj" /><label for="grekaj">Anstataŭado de grekaj alfabetoj <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &phi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</span></label><br />
-
+<h4>Oficialaj Sistemoj</h4>
+<p>
 <input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
 
 <input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="w_sistemo" /><label for="w_sistemo">W-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
-
 <input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
+</p>
 
-<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
+<h4>Neoficialaj Sistemoj</h4>
+<p>
+<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj<br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+<input type="checkbox" id="grekaj" /><label for="grekaj">Anstataŭado de grekaj alfabetoj<br /><span class="malgranda">&emsp;&emsp;&emsp;&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &phi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo <span class="oblikva">(neoficiala)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(neoficiala, ne konvertu dufoje)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="w_sistemo" /><label for="w_sistemo">W-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
+
+
+<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="malregula_sistemo" /><label for="malregula_sistemo">Miksita sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, xg &rarr; ĝ, qh &rarr; ĥ, xj &rarr; ĵ, sy &rarr; ŝ, w &rarr; ŭ</span></label><br />
 </p>
 
 <br />

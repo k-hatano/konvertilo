@@ -101,6 +101,7 @@ function konvertuAlEsperanto() {
 	var grekaj = document.getElementById('grekaj').checked;
 	var h_sistemo = document.getElementById('h_sistemo').checked;
 	var x_sistemo = document.getElementById('x_sistemo').checked;
+	var plilongigita_h_sistemo = document.getElementById('plilongigita_h_sistemo').checked;
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var q_sistemo = document.getElementById('q_sistemo').checked;
 	var w_sistemo = document.getElementById('w_sistemo').checked;
@@ -173,6 +174,13 @@ function konvertuAlEsperanto() {
 		enhavo = enhavo.replace(/Θ/g,'Ĵ');
 		enhavo = enhavo.replace(/Σ/g,'Ŝ');
 		enhavo = enhavo.replace(/Υ/g,'Ŭ');
+	}
+
+	if (plilongigita_h_sistemo) {
+		enhavo = enhavo.replace(/k[hH]/g,'ĥ');
+		enhavo = enhavo.replace(/v[hH]/g,'ŭ');
+		enhavo = enhavo.replace(/K[xX]/g,'Ĥ');
+		enhavo = enhavo.replace(/V[xX]/g,'Ŭ');
 	}
 
 	if (pre_x_sistemo) {
@@ -324,6 +332,7 @@ function konvertuAlAscii() {
 	var grekaj = document.getElementById('grekaj').checked;
 	var h_sistemo = document.getElementById('h_sistemo').checked;
 	var x_sistemo = document.getElementById('x_sistemo').checked;
+	var plilongigita_h_sistemo = document.getElementById('plilongigita_h_sistemo').checked;
 	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
 	var q_sistemo = document.getElementById('q_sistemo').checked;
 	var w_sistemo = document.getElementById('w_sistemo').checked;
@@ -411,6 +420,13 @@ function konvertuAlAscii() {
 		enhavo = enhavo.replace(/Ĵ/g,'Jq');
 		enhavo = enhavo.replace(/Ŝ/g,'Sq');
 		enhavo = enhavo.replace(/Ŭ/g,'Uq');
+	}
+
+	if (plilongigita_h_sistemo) {
+		enhavo = enhavo.replace(/ĥ/g,'kh');
+		enhavo = enhavo.replace(/ŭ/g,'vh');
+		enhavo = enhavo.replace(/Ĥ/g,'Kh');
+		enhavo = enhavo.replace(/Ŭ/g,'Vh');
 	}
 
 	if (pre_x_sistemo) {

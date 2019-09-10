@@ -585,6 +585,7 @@ function aldonuStreketonPostAkcyento(vorto) {
 
 function katakanigo() {
 	var enhavo = document.getElementById('enhavo').value;
+	var reduktu_dependantajn = document.getElementById('reduktu_dependantajn').checked;
 	var rezulto = "";
 
 	enhavo = enhavo.replace(/\-/g,'');
@@ -610,63 +611,99 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Bb][Uu]/g,'ブ');
 	enhavo = enhavo.replace(/[Bb][Ee]/g,'ベ');
 	enhavo = enhavo.replace(/[Bb][Oo]/g,'ボ');
-	enhavo = enhavo.replace(/[Bb]/g,'ㇷ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Bb]/g,'ブ');
+	} else {
+		enhavo = enhavo.replace(/[Bb]/g,'ㇷ゙');
+	}
 
 	enhavo = enhavo.replace(/[Cc][Aa]/g,'ツァ');
 	enhavo = enhavo.replace(/[Cc][Ii]/g,'ツィ');
 	enhavo = enhavo.replace(/[Cc][Uu]/g,'ツ');
 	enhavo = enhavo.replace(/[Cc][Ee]/g,'ツェ');
 	enhavo = enhavo.replace(/[Cc][Oo]/g,'ツォ');
-	enhavo = enhavo.replace(/[Cc]/g,'ツ゚');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Cc]/g,'ツ');
+	} else {
+		enhavo = enhavo.replace(/[Cc]/g,'ツ゚');
+	}
 
 	enhavo = enhavo.replace(/[Ĉĉ][Aa]/g,'チャ');
 	enhavo = enhavo.replace(/[Ĉĉ][Ii]/g,'チ');
 	enhavo = enhavo.replace(/[Ĉĉ][Uu]/g,'チュ');
 	enhavo = enhavo.replace(/[Ĉĉ][Ee]/g,'チェ');
 	enhavo = enhavo.replace(/[Ĉĉ][Oo]/g,'チョ');
-	enhavo = enhavo.replace(/[Ĉĉ]/g,'セ゚');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ĉĉ]/g,'チュ');
+	} else {
+		enhavo = enhavo.replace(/[Ĉĉ]/g,'ツ゚');
+	}
 
 	enhavo = enhavo.replace(/[Dd][Aa]/g,'ダ');
 	enhavo = enhavo.replace(/[Dd][Ii]/g,'ディ');
 	enhavo = enhavo.replace(/[Dd][Uu]/g,'ドゥ');
 	enhavo = enhavo.replace(/[Dd][Ee]/g,'デ');
 	enhavo = enhavo.replace(/[Dd][Oo]/g,'ド');
-	enhavo = enhavo.replace(/[Dd]/g,'ㇳ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Dd]/g,'ドゥ');
+	} else {
+		enhavo = enhavo.replace(/[Dd]/g,'ㇳ゙');
+	}
 
 	enhavo = enhavo.replace(/[Ff][Aa]/g,'ファ');
 	enhavo = enhavo.replace(/[Ff][Ii]/g,'フィ');
 	enhavo = enhavo.replace(/[Ff][Uu]/g,'フ');
 	enhavo = enhavo.replace(/[Ff][Ee]/g,'フェ');
 	enhavo = enhavo.replace(/[Ff][Oo]/g,'フォ');
-	enhavo = enhavo.replace(/[Ff]/g,'ㇷ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ff]/g,'フ');
+	} else {
+		enhavo = enhavo.replace(/[Ff]/g,'ㇷ');
+	}
 
 	enhavo = enhavo.replace(/[Gg][Aa]/g,'ガ');
 	enhavo = enhavo.replace(/[Gg][Ii]/g,'ギ');
 	enhavo = enhavo.replace(/[Gg][Uu]/g,'グ');
 	enhavo = enhavo.replace(/[Gg][Ee]/g,'ゲ');
 	enhavo = enhavo.replace(/[Gg][Oo]/g,'ゴ');
-	enhavo = enhavo.replace(/[Gg]/g,'ㇰ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Gg]/g,'グ');
+	} else {
+		enhavo = enhavo.replace(/[Gg]/g,'ㇰ゙');
+	}
 
 	enhavo = enhavo.replace(/[Ĝĝ][Aa]/g,'ヂャ');
 	enhavo = enhavo.replace(/[Ĝĝ][Ii]/g,'ヂ');
 	enhavo = enhavo.replace(/[Ĝĝ][Uu]/g,'ヂュ');
 	enhavo = enhavo.replace(/[Ĝĝ][Ee]/g,'ヂェ');
 	enhavo = enhavo.replace(/[Ĝĝ][Oo]/g,'ヂョ');
-	enhavo = enhavo.replace(/[Ĝĝ]/g,'ッ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ĝĝ]/g,'ヂュ');
+	} else {
+		enhavo = enhavo.replace(/[Ĝĝ]/g,'ッ゙');
+	}
 
 	enhavo = enhavo.replace(/[Hh][Aa]/g,'ハ');
 	enhavo = enhavo.replace(/[Hh][Ii]/g,'ヒ');
 	enhavo = enhavo.replace(/[Hh][Uu]/g,'ホゥ');
 	enhavo = enhavo.replace(/[Hh][Ee]/g,'ヘ');
 	enhavo = enhavo.replace(/[Hh][Oo]/g,'ホ');
-	enhavo = enhavo.replace(/[Hh]/g,'ㇹ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Hh]/g,'ホ');
+	} else {
+		enhavo = enhavo.replace(/[Hh]/g,'ㇹ');
+	}
 
 	enhavo = enhavo.replace(/[Ĥĥ][Aa]/g,'ッハ');
 	enhavo = enhavo.replace(/[Ĥĥ][Ii]/g,'ッヒ');
-	enhavo = enhavo.replace(/[Ĥĥ][Uu]/g,'ッホウ');
+	enhavo = enhavo.replace(/[Ĥĥ][Uu]/g,'ッホゥ');
 	enhavo = enhavo.replace(/[Ĥĥ][Ee]/g,'ッヘ');
 	enhavo = enhavo.replace(/[Ĥĥ][Oo]/g,'ッホ');
-	enhavo = enhavo.replace(/[Ĥĥ]/g,'ッㇹ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ĥĥ]/g,'ッホ');
+	} else {
+		enhavo = enhavo.replace(/[Ĥĥ]/g,'ッㇹ');
+	}
 
 	enhavo = enhavo.replace(/[Jj][Aa]/g,'ヤ');
 	enhavo = enhavo.replace(/[Jj][Ii]/g,'イィ');
@@ -680,28 +717,50 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Ĵĵ][Uu]/g,'ジュ');
 	enhavo = enhavo.replace(/[Ĵĵ][Ee]/g,'ジェ');
 	enhavo = enhavo.replace(/[Ĵĵ][Oo]/g,'ジョ');
-	enhavo = enhavo.replace(/[Ĵĵ]/g,'ㇱ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ĵĵ]/g,'ジ');
+	} else {
+		enhavo = enhavo.replace(/[Ĵĵ]/g,'ㇱ゙');
+	}
 
 	enhavo = enhavo.replace(/[Kk][Aa]/g,'カ');
 	enhavo = enhavo.replace(/[Kk][Ii]/g,'キ');
 	enhavo = enhavo.replace(/[Kk][Uu]/g,'ク');
 	enhavo = enhavo.replace(/[Kk][Ee]/g,'ケ');
 	enhavo = enhavo.replace(/[Kk][Oo]/g,'コ');
-	enhavo = enhavo.replace(/[Kk]/g,'ㇰ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Kk]/g,'ク');
+	} else {
+		enhavo = enhavo.replace(/[Kk]/g,'ㇰ');
+	}
 
-	enhavo = enhavo.replace(/[Ll][Aa]/g,'ラ゚');
-	enhavo = enhavo.replace(/[Ll][Ii]/g,'リ゚');
-	enhavo = enhavo.replace(/[Ll][Uu]/g,'ル゚');
-	enhavo = enhavo.replace(/[Ll][Ee]/g,'レ゚');
-	enhavo = enhavo.replace(/[Ll][Oo]/g,'ロ゚');
-	enhavo = enhavo.replace(/[Ll]/g,'ㇽ゚');
+
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ll][Aa]/g,'ラ');
+		enhavo = enhavo.replace(/[Ll][Ii]/g,'リ');
+		enhavo = enhavo.replace(/[Ll][Uu]/g,'ル');
+		enhavo = enhavo.replace(/[Ll][Ee]/g,'レ');
+		enhavo = enhavo.replace(/[Ll][Oo]/g,'ロ');
+		enhavo = enhavo.replace(/[Ll]/g,'ル');
+	} else {
+		enhavo = enhavo.replace(/[Ll][Aa]/g,'ラ゚');
+		enhavo = enhavo.replace(/[Ll][Ii]/g,'リ゚');
+		enhavo = enhavo.replace(/[Ll][Uu]/g,'ル゚');
+		enhavo = enhavo.replace(/[Ll][Ee]/g,'レ゚');
+		enhavo = enhavo.replace(/[Ll][Oo]/g,'ロ゚');
+		enhavo = enhavo.replace(/[Ll]/g,'ㇽ゚');
+	}
 
 	enhavo = enhavo.replace(/[Mm][Aa]/g,'マ');
 	enhavo = enhavo.replace(/[Mm][Ii]/g,'ミ');
 	enhavo = enhavo.replace(/[Mm][Uu]/g,'ム');
 	enhavo = enhavo.replace(/[Mm][Ee]/g,'メ');
 	enhavo = enhavo.replace(/[Mm][Oo]/g,'モ');
-	enhavo = enhavo.replace(/[Mm]/g,'ㇺ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Mm]/g,'ム');
+	} else {
+		enhavo = enhavo.replace(/[Mm]/g,'ㇺ');
+	}
 
 	enhavo = enhavo.replace(/[Nn][Aa]/g,'ナ');
 	enhavo = enhavo.replace(/[Nn][Ii]/g,'ニ');
@@ -715,56 +774,98 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Pp][Uu]/g,'プ');
 	enhavo = enhavo.replace(/[Pp][Ee]/g,'ペ');
 	enhavo = enhavo.replace(/[Pp][Oo]/g,'ポ');
-	enhavo = enhavo.replace(/[Pp]/g,'ㇷ゚');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Pp]/g,'プ');
+	} else {
+		enhavo = enhavo.replace(/[Pp]/g,'ㇷ゚');
+	}
 
 	enhavo = enhavo.replace(/[Rr][Aa]/g,'ラ');
 	enhavo = enhavo.replace(/[Rr][Ii]/g,'リ');
 	enhavo = enhavo.replace(/[Rr][Uu]/g,'ル');
 	enhavo = enhavo.replace(/[Rr][Ee]/g,'レ');
 	enhavo = enhavo.replace(/[Rr][Oo]/g,'ロ');
-	enhavo = enhavo.replace(/[Rr]/g,'ㇻ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Rr]/g,'ラ');
+	} else {
+		enhavo = enhavo.replace(/[Rr]/g,'ㇻ');
+	}
 
 	enhavo = enhavo.replace(/[Ss][Aa]/g,'サ');
 	enhavo = enhavo.replace(/[Ss][Ii]/g,'スィ');
 	enhavo = enhavo.replace(/[Ss][Uu]/g,'ス');
 	enhavo = enhavo.replace(/[Ss][Ee]/g,'セ');
 	enhavo = enhavo.replace(/[Ss][Oo]/g,'ソ');
-	enhavo = enhavo.replace(/[Ss]/g,'ㇲ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ss]/g,'ス');
+	} else {
+		enhavo = enhavo.replace(/[Ss]/g,'ㇲ');
+	}
 
 	enhavo = enhavo.replace(/[Ŝŝ][Aa]/g,'シャ');
 	enhavo = enhavo.replace(/[Ŝŝ][Ii]/g,'シ');
 	enhavo = enhavo.replace(/[Ŝŝ][Uu]/g,'シュ');
 	enhavo = enhavo.replace(/[Ŝŝ][Ee]/g,'シェ');
 	enhavo = enhavo.replace(/[Ŝŝ][Oo]/g,'ショ');
-	enhavo = enhavo.replace(/[Ŝŝ]/g,'ㇱ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ŝŝ]/g,'シ');
+	} else {
+		enhavo = enhavo.replace(/[Ŝŝ]/g,'ㇱ');
+	}
 
 	enhavo = enhavo.replace(/[Tt][Aa]/g,'タ');
 	enhavo = enhavo.replace(/[Tt][Ii]/g,'ティ');
 	enhavo = enhavo.replace(/[Tt][Uu]/g,'トゥ');
 	enhavo = enhavo.replace(/[Tt][Ee]/g,'テ');
 	enhavo = enhavo.replace(/[Tt][Oo]/g,'ト');
-	enhavo = enhavo.replace(/[Tt]/g,'ㇳ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Tt]/g,'ト');
+	} else {
+		enhavo = enhavo.replace(/[Tt]/g,'ㇳ');
+	}
 
-	enhavo = enhavo.replace(/[Ŭŭ][Aa]/g,'ワ');
-	enhavo = enhavo.replace(/[Ŭŭ][Ii]/g,'ヰ');
-	enhavo = enhavo.replace(/[Ŭŭ][Uu]/g,'于');
-	enhavo = enhavo.replace(/[Ŭŭ][Ee]/g,'ヱ');
-	enhavo = enhavo.replace(/[Ŭŭ][Oo]/g,'ヲ');
+
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ŭŭ][Aa]/g,'ワ');
+		enhavo = enhavo.replace(/[Ŭŭ][Ii]/g,'ウィ');
+		enhavo = enhavo.replace(/[Ŭŭ][Uu]/g,'ウ');
+		enhavo = enhavo.replace(/[Ŭŭ][Ee]/g,'ウェ');
+		enhavo = enhavo.replace(/[Ŭŭ][Oo]/g,'ウォ');
+	} else {
+		enhavo = enhavo.replace(/[Ŭŭ][Aa]/g,'ワ');
+		enhavo = enhavo.replace(/[Ŭŭ][Ii]/g,'ヰ');
+		enhavo = enhavo.replace(/[Ŭŭ][Uu]/g,'于');
+		enhavo = enhavo.replace(/[Ŭŭ][Ee]/g,'ヱ');
+		enhavo = enhavo.replace(/[Ŭŭ][Oo]/g,'ヲ');
+	}
 	enhavo = enhavo.replace(/[Ŭŭ]/g,'ゥ');
 
-	enhavo = enhavo.replace(/[Vv][Aa]/g,'ヷ');
-	enhavo = enhavo.replace(/[Vv][Ii]/g,'ヸ');
-	enhavo = enhavo.replace(/[Vv][Uu]/g,'ヴ');
-	enhavo = enhavo.replace(/[Vv][Ee]/g,'ヹ');
-	enhavo = enhavo.replace(/[Vv][Oo]/g,'ヺ');
-	enhavo = enhavo.replace(/[Vv]/g,'ゥ゙');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Vv][Aa]/g,'ヴァ');
+		enhavo = enhavo.replace(/[Vv][Ii]/g,'ヴィ');
+		enhavo = enhavo.replace(/[Vv][Uu]/g,'ヴ');
+		enhavo = enhavo.replace(/[Vv][Ee]/g,'ヴェ');
+		enhavo = enhavo.replace(/[Vv][Oo]/g,'ヴォ');
+		enhavo = enhavo.replace(/[Vv]/g,'ヴ');
+	} else {
+		enhavo = enhavo.replace(/[Vv][Aa]/g,'ヷ');
+		enhavo = enhavo.replace(/[Vv][Ii]/g,'ヸ');
+		enhavo = enhavo.replace(/[Vv][Uu]/g,'ヴ');
+		enhavo = enhavo.replace(/[Vv][Ee]/g,'ヹ');
+		enhavo = enhavo.replace(/[Vv][Oo]/g,'ヺ');
+		enhavo = enhavo.replace(/[Vv]/g,'ゥ゙');
+	}
 
 	enhavo = enhavo.replace(/[Zz][Aa]/g,'ザ');
 	enhavo = enhavo.replace(/[Zz][Ii]/g,'ズィ');
 	enhavo = enhavo.replace(/[Zz][Uu]/g,'ズ');
 	enhavo = enhavo.replace(/[Zz][Ee]/g,'ゼ');
 	enhavo = enhavo.replace(/[Zz][Oo]/g,'ゾ');
-	enhavo = enhavo.replace(/[Zz]/g,'ㇲ゛');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Zz]/g,'ズ');
+	} else {
+		enhavo = enhavo.replace(/[Zz]/g,'ㇲ゛');
+	}
 
 	enhavo = enhavo.replace(/[Aa]/g,'ア');
 	enhavo = enhavo.replace(/[Ii]/g,'イ');

@@ -617,14 +617,14 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Cc][Uu]/g,'ツ');
 	enhavo = enhavo.replace(/[Cc][Ee]/g,'ツェ');
 	enhavo = enhavo.replace(/[Cc][Oo]/g,'ツォ');
-	enhavo = enhavo.replace(/[Cc]/g,'ッ');
+	enhavo = enhavo.replace(/[Cc]/g,'ツ゚');
 
 	enhavo = enhavo.replace(/[Ĉĉ][Aa]/g,'チャ');
 	enhavo = enhavo.replace(/[Ĉĉ][Ii]/g,'チ');
 	enhavo = enhavo.replace(/[Ĉĉ][Uu]/g,'チュ');
-	enhavo = enhavo.replace(/[Ĉĉ][Ee]/g,'セ゚');
+	enhavo = enhavo.replace(/[Ĉĉ][Ee]/g,'チェ');
 	enhavo = enhavo.replace(/[Ĉĉ][Oo]/g,'チョ');
-	enhavo = enhavo.replace(/[Ĉĉ]/g,'ッ');
+	enhavo = enhavo.replace(/[Ĉĉ]/g,'セ゚');
 
 	enhavo = enhavo.replace(/[Dd][Aa]/g,'ダ');
 	enhavo = enhavo.replace(/[Dd][Ii]/g,'ディ');
@@ -652,7 +652,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Ĝĝ][Uu]/g,'ヂュ');
 	enhavo = enhavo.replace(/[Ĝĝ][Ee]/g,'ヂェ');
 	enhavo = enhavo.replace(/[Ĝĝ][Oo]/g,'ヂョ');
-	enhavo = enhavo.replace(/[Ĝĝ]/g,'ㇱ゙');
+	enhavo = enhavo.replace(/[Ĝĝ]/g,'ッ゙');
 
 	enhavo = enhavo.replace(/[Hh][Aa]/g,'ハ');
 	enhavo = enhavo.replace(/[Hh][Ii]/g,'ヒ');
@@ -740,7 +740,7 @@ function katakanigo() {
 
 	enhavo = enhavo.replace(/[Tt][Aa]/g,'タ');
 	enhavo = enhavo.replace(/[Tt][Ii]/g,'ティ');
-	enhavo = enhavo.replace(/[Tt][Uu]/g,'ト゚');
+	enhavo = enhavo.replace(/[Tt][Uu]/g,'トゥ');
 	enhavo = enhavo.replace(/[Tt][Ee]/g,'テ');
 	enhavo = enhavo.replace(/[Tt][Oo]/g,'ト');
 	enhavo = enhavo.replace(/[Tt]/g,'ㇳ');

@@ -694,15 +694,20 @@ function katakanigo() {
 		enhavo = enhavo.replace(/[Hh]/g,'ㇹ');
 	}
 
-	enhavo = enhavo.replace(/[Ĥĥ][Aa]/g,'ッハ');
-	enhavo = enhavo.replace(/[Ĥĥ][Ii]/g,'ッヒ');
-	enhavo = enhavo.replace(/[Ĥĥ][Uu]/g,'ッホゥ');
-	enhavo = enhavo.replace(/[Ĥĥ][Ee]/g,'ッヘ');
-	enhavo = enhavo.replace(/[Ĥĥ][Oo]/g,'ッホ');
 	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Ĥĥ][Aa]/g,'ッハ');
+		enhavo = enhavo.replace(/[Ĥĥ][Ii]/g,'ッヒ');
+		enhavo = enhavo.replace(/[Ĥĥ][Uu]/g,'ッホゥ');
+		enhavo = enhavo.replace(/[Ĥĥ][Ee]/g,'ッヘ');
+		enhavo = enhavo.replace(/[Ĥĥ][Oo]/g,'ッホ');
 		enhavo = enhavo.replace(/[Ĥĥ]/g,'ッホ');
 	} else {
-		enhavo = enhavo.replace(/[Ĥĥ]/g,'ッㇹ');
+		enhavo = enhavo.replace(/[Ĥĥ][Aa]/g,'カ゚');
+		enhavo = enhavo.replace(/[Ĥĥ][Ii]/g,'キ゚');
+		enhavo = enhavo.replace(/[Ĥĥ][Uu]/g,'ク゚');
+		enhavo = enhavo.replace(/[Ĥĥ][Ee]/g,'ケ゚');
+		enhavo = enhavo.replace(/[Ĥĥ][Oo]/g,'コ゚');
+		enhavo = enhavo.replace(/[Ĥĥ]/g,'ㇰ゚');
 	}
 
 	enhavo = enhavo.replace(/[Jj][Aa]/g,'ヤ');
@@ -736,12 +741,12 @@ function katakanigo() {
 
 
 	if (reduktu_dependantajn) {
-		enhavo = enhavo.replace(/[Ll][Aa]/g,'ラ');
-		enhavo = enhavo.replace(/[Ll][Ii]/g,'リ');
-		enhavo = enhavo.replace(/[Ll][Uu]/g,'ル');
-		enhavo = enhavo.replace(/[Ll][Ee]/g,'レ');
-		enhavo = enhavo.replace(/[Ll][Oo]/g,'ロ');
-		enhavo = enhavo.replace(/[Ll]/g,'ル');
+		enhavo = enhavo.replace(/[Ll][Aa]/g,'ら');
+		enhavo = enhavo.replace(/[Ll][Ii]/g,'り');
+		enhavo = enhavo.replace(/[Ll][Uu]/g,'る');
+		enhavo = enhavo.replace(/[Ll][Ee]/g,'れ');
+		enhavo = enhavo.replace(/[Ll][Oo]/g,'ろ');
+		enhavo = enhavo.replace(/[Ll]/g,'る');
 	} else {
 		enhavo = enhavo.replace(/[Ll][Aa]/g,'ラ゚');
 		enhavo = enhavo.replace(/[Ll][Ii]/g,'リ゚');

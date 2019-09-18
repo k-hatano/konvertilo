@@ -59,10 +59,14 @@ var monatoj = [
 ];
 
 onload = function() {
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 
-	var enhavo = document.getElementById('enhavo').value;
-	document.getElementById('enhavo').value = hodiaux() + "\r\r" + enhavo; 
+	var enhavo = elemento('enhavo').value;
+	elemento('enhavo').value = hodiaux() + "\r\r" + enhavo; 
+}
+
+function elemento(nomo) {
+	return document.getElementById(nomo);
 }
 
 function hodiaux() {
@@ -79,481 +83,481 @@ function hodiaux() {
 }
 
 function xSistemoKontrolita() {
-	var x_sistemo = document.getElementById('x_sistemo').checked;
+	var x_sistemo = elemento('x_sistemo').checked;
 
 	if (x_sistemo) {
-		document.getElementById('pre_x_sistemo').checked = false;
+		elemento('pre_x_sistemo').checked = false;
 	}
 }
 
 function preXSistemoKontrolita() {
-	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
+	var pre_x_sistemo = elemento('pre_x_sistemo').checked;
 
 	if (pre_x_sistemo) {
-		document.getElementById('x_sistemo').checked = false;
+		elemento('x_sistemo').checked = false;
 	}
 }
 
 function konvertuAlEsperanto() {
-	var enhavo = document.getElementById('enhavo').value;
+	var enhavo = elemento('enhavo').value;
 
-	var anstatauigo = document.getElementById('anstatauigo').checked;
-	var grekaj = document.getElementById('grekaj').checked;
-	var h_sistemo = document.getElementById('h_sistemo').checked;
-	var x_sistemo = document.getElementById('x_sistemo').checked;
-	var plilongigita_h_sistemo = document.getElementById('plilongigita_h_sistemo').checked;
-	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
-	var q_sistemo = document.getElementById('q_sistemo').checked;
-	var w_sistemo = document.getElementById('w_sistemo').checked;
-	var y_sistemo = document.getElementById('y_sistemo').checked;
-	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
-	var pre_kareto_sistemo = document.getElementById('pre_kareto_sistemo').checked;
-	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
-	var pre_apostrophe_sistemo = document.getElementById('pre_apostrophe_sistemo').checked;
-	var angla_stila_sistemo = document.getElementById('angla_stila_sistemo').checked;
-	var malregula_sistemo = document.getElementById('malregula_sistemo').checked;
+	var anstatauigo = elemento('anstatauigo').checked;
+	var grekaj = elemento('grekaj').checked;
+	var h_sistemo = elemento('h_sistemo').checked;
+	var x_sistemo = elemento('x_sistemo').checked;
+	var plilongigita_h_sistemo = elemento('plilongigita_h_sistemo').checked;
+	var pre_x_sistemo = elemento('pre_x_sistemo').checked;
+	var q_sistemo = elemento('q_sistemo').checked;
+	var w_sistemo = elemento('w_sistemo').checked;
+	var y_sistemo = elemento('y_sistemo').checked;
+	var kareto_sistemo = elemento('kareto_sistemo').checked;
+	var pre_kareto_sistemo = elemento('pre_kareto_sistemo').checked;
+	var apostrophe_sistemo = elemento('apostrophe_sistemo').checked;
+	var pre_apostrophe_sistemo = elemento('pre_apostrophe_sistemo').checked;
+	var angla_stila_sistemo = elemento('angla_stila_sistemo').checked;
+	var malregula_sistemo = elemento('malregula_sistemo').checked;
 
 	if (h_sistemo) {
-		enhavo = enhavo.replace(/c[hH]/g,'ĉ');
-		enhavo = enhavo.replace(/g[hH]/g,'ĝ');
-		enhavo = enhavo.replace(/h[hH]/g,'ĥ');
-		enhavo = enhavo.replace(/j[hH]/g,'ĵ');
-		enhavo = enhavo.replace(/s[hH]/g,'ŝ');
-		enhavo = enhavo.replace(/C[hH]/g,'Ĉ');
-		enhavo = enhavo.replace(/G[hH]/g,'Ĝ');
-		enhavo = enhavo.replace(/H[hH]/g,'Ĥ');
-		enhavo = enhavo.replace(/J[hH]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[hH]/g,'Ŝ');
+		enhavo = enhavo.replace(/c[hH]/g,'ĉ')
+					   .replace(/g[hH]/g,'ĝ')
+					   .replace(/h[hH]/g,'ĥ')
+					   .replace(/j[hH]/g,'ĵ')
+					   .replace(/s[hH]/g,'ŝ')
+					   .replace(/C[hH]/g,'Ĉ')
+					   .replace(/G[hH]/g,'Ĝ')
+					   .replace(/H[hH]/g,'Ĥ')
+					   .replace(/J[hH]/g,'Ĵ')
+					   .replace(/S[hH]/g,'Ŝ');
 	}
 
 	if (x_sistemo) {
-		enhavo = enhavo.replace(/c[xX]/g,'ĉ');
-		enhavo = enhavo.replace(/g[xX]/g,'ĝ');
-		enhavo = enhavo.replace(/h[xX]/g,'ĥ');
-		enhavo = enhavo.replace(/j[xX]/g,'ĵ');
-		enhavo = enhavo.replace(/s[xX]/g,'ŝ');
-		enhavo = enhavo.replace(/[uvw][xX]/g,'ŭ');
-		enhavo = enhavo.replace(/C[xX]/g,'Ĉ');
-		enhavo = enhavo.replace(/G[xX]/g,'Ĝ');
-		enhavo = enhavo.replace(/H[xX]/g,'Ĥ');
-		enhavo = enhavo.replace(/J[xX]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[xX]/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW][xX]/g,'Ŭ');
+		enhavo = enhavo.replace(/c[xX]/g,'ĉ')
+					   .replace(/g[xX]/g,'ĝ')
+					   .replace(/h[xX]/g,'ĥ')
+					   .replace(/j[xX]/g,'ĵ')
+					   .replace(/s[xX]/g,'ŝ')
+					   .replace(/[uvw][xX]/g,'ŭ')
+					   .replace(/C[xX]/g,'Ĉ')
+					   .replace(/G[xX]/g,'Ĝ')
+					   .replace(/H[xX]/g,'Ĥ')
+					   .replace(/J[xX]/g,'Ĵ')
+					   .replace(/S[xX]/g,'Ŝ')
+					   .replace(/[UVW][xX]/g,'Ŭ');
 	}
 
 	if (kareto_sistemo) {
-		enhavo = enhavo.replace(/c\^/g,'ĉ');
-		enhavo = enhavo.replace(/g\^/g,'ĝ');
-		enhavo = enhavo.replace(/h\^/g,'ĥ');
-		enhavo = enhavo.replace(/j\^/g,'ĵ');
-		enhavo = enhavo.replace(/s\^/g,'ŝ');
-		enhavo = enhavo.replace(/[uvw][\^\~]/g,'ŭ');
-		enhavo = enhavo.replace(/C\^/g,'Ĉ');
-		enhavo = enhavo.replace(/G\^/g,'Ĝ');
-		enhavo = enhavo.replace(/H\^/g,'Ĥ');
-		enhavo = enhavo.replace(/J\^/g,'Ĵ');
-		enhavo = enhavo.replace(/S\^/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW][\^\~]/g,'Ŭ');
+		enhavo = enhavo.replace(/c\^/g,'ĉ')
+					   .replace(/g\^/g,'ĝ')
+					   .replace(/h\^/g,'ĥ')
+					   .replace(/j\^/g,'ĵ')
+					   .replace(/s\^/g,'ŝ')
+					   .replace(/[uvw][\^\~]/g,'ŭ')
+					   .replace(/C\^/g,'Ĉ')
+					   .replace(/G\^/g,'Ĝ')
+					   .replace(/H\^/g,'Ĥ')
+					   .replace(/J\^/g,'Ĵ')
+					   .replace(/S\^/g,'Ŝ')
+					   .replace(/[UVW][\^\~]/g,'Ŭ');
 	}
 
 	if (anstatauigo) {
-		enhavo = enhavo.replace(/w/g,'ŭ');
-		enhavo = enhavo.replace(/W/g,'Ŭ');
+		enhavo = enhavo.replace(/w/g,'ŭ')
+					   .replace(/W/g,'Ŭ');
 	}
 
 	if (grekaj) {
-		enhavo = enhavo.replace(/ξ/g,'ĉ');
-		enhavo = enhavo.replace(/γ/g,'ĝ');
-		enhavo = enhavo.replace(/φ/g,'ĥ');
-		enhavo = enhavo.replace(/θ/g,'ĵ');
-		enhavo = enhavo.replace(/σ/g,'ŝ');
-		enhavo = enhavo.replace(/υ/g,'ŭ');
-		enhavo = enhavo.replace(/Ξ/g,'Ĉ');
-		enhavo = enhavo.replace(/Γ/g,'Ĝ');
-		enhavo = enhavo.replace(/Φ/g,'Ĥ');
-		enhavo = enhavo.replace(/Θ/g,'Ĵ');
-		enhavo = enhavo.replace(/Σ/g,'Ŝ');
-		enhavo = enhavo.replace(/Υ/g,'Ŭ');
+		enhavo = enhavo.replace(/ξ/g,'ĉ')
+					   .replace(/γ/g,'ĝ')
+					   .replace(/χ/g,'ĥ')
+					   .replace(/θ/g,'ĵ')
+					   .replace(/σ/g,'ŝ')
+					   .replace(/υ/g,'ŭ')
+					   .replace(/Ξ/g,'Ĉ')
+					   .replace(/Γ/g,'Ĝ')
+					   .replace(/Χ/g,'Ĥ')
+					   .replace(/Θ/g,'Ĵ')
+					   .replace(/Σ/g,'Ŝ')
+					   .replace(/Υ/g,'Ŭ');
 	}
 
 	if (plilongigita_h_sistemo) {
-		enhavo = enhavo.replace(/k[hH]/g,'ĥ');
-		enhavo = enhavo.replace(/v[hH]/g,'ŭ');
-		enhavo = enhavo.replace(/K[xX]/g,'Ĥ');
-		enhavo = enhavo.replace(/V[xX]/g,'Ŭ');
+		enhavo = enhavo.replace(/k[hH]/g,'ĥ')
+					   .replace(/v[hH]/g,'ŭ')
+					   .replace(/K[xX]/g,'Ĥ')
+					   .replace(/V[xX]/g,'Ŭ');
 	}
 
 	if (pre_x_sistemo) {
-		enhavo = enhavo.replace(/x[cC]/g,'ĉ');
-		enhavo = enhavo.replace(/x[gG]/g,'ĝ');
-		enhavo = enhavo.replace(/x[hH]/g,'ĥ');
-		enhavo = enhavo.replace(/x[jJ]/g,'ĵ');
-		enhavo = enhavo.replace(/x[sS]/g,'ŝ');
-		enhavo = enhavo.replace(/x[uvwUVW]/g,'ŭ');
-		enhavo = enhavo.replace(/X[cC]/g,'Ĉ');
-		enhavo = enhavo.replace(/X[gG]/g,'Ĝ');
-		enhavo = enhavo.replace(/X[hH]/g,'Ĥ');
-		enhavo = enhavo.replace(/X[jJ]/g,'Ĵ');
-		enhavo = enhavo.replace(/X[sS]/g,'Ŝ');
-		enhavo = enhavo.replace(/X[uvwUVW]/g,'Ŭ');
+		enhavo = enhavo.replace(/x[cC]/g,'ĉ')
+					   .replace(/x[gG]/g,'ĝ')
+					   .replace(/x[hH]/g,'ĥ')
+					   .replace(/x[jJ]/g,'ĵ')
+					   .replace(/x[sS]/g,'ŝ')
+					   .replace(/x[uvwUVW]/g,'ŭ')
+					   .replace(/X[cC]/g,'Ĉ')
+					   .replace(/X[gG]/g,'Ĝ')
+					   .replace(/X[hH]/g,'Ĥ')
+					   .replace(/X[jJ]/g,'Ĵ')
+					   .replace(/X[sS]/g,'Ŝ')
+					   .replace(/X[uvwUVW]/g,'Ŭ');
 	}
 
 	if (q_sistemo) {
-		enhavo = enhavo.replace(/c[qQ]/g,'ĉ');
-		enhavo = enhavo.replace(/g[qQ]/g,'ĝ');
-		enhavo = enhavo.replace(/h[qQ]/g,'ĥ');
-		enhavo = enhavo.replace(/j[qQ]/g,'ĵ');
-		enhavo = enhavo.replace(/s[qQ]/g,'ŝ');
-		enhavo = enhavo.replace(/[uvw][qQ]/g,'ŭ');
-		enhavo = enhavo.replace(/C[qQ]/g,'Ĉ');
-		enhavo = enhavo.replace(/G[qQ]/g,'Ĝ');
-		enhavo = enhavo.replace(/H[qQ]/g,'Ĥ');
-		enhavo = enhavo.replace(/J[qQ]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[qQ]/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW][qQ]/g,'Ŭ');
+		enhavo = enhavo.replace(/c[qQ]/g,'ĉ')
+					   .replace(/g[qQ]/g,'ĝ')
+					   .replace(/h[qQ]/g,'ĥ')
+					   .replace(/j[qQ]/g,'ĵ')
+					   .replace(/s[qQ]/g,'ŝ')
+					   .replace(/[uvw][qQ]/g,'ŭ')
+					   .replace(/C[qQ]/g,'Ĉ')
+					   .replace(/G[qQ]/g,'Ĝ')
+					   .replace(/H[qQ]/g,'Ĥ')
+					   .replace(/J[qQ]/g,'Ĵ')
+					   .replace(/S[qQ]/g,'Ŝ')
+					   .replace(/[UVW][qQ]/g,'Ŭ');
 	}
 
 	if (w_sistemo) {
-		enhavo = enhavo.replace(/c[wW]/g,'ĉ');
-		enhavo = enhavo.replace(/g[wW]/g,'ĝ');
-		enhavo = enhavo.replace(/h[wW]/g,'ĥ');
-		enhavo = enhavo.replace(/j[wW]/g,'ĵ');
-		enhavo = enhavo.replace(/s[wW]/g,'ŝ');
-		enhavo = enhavo.replace(/[uv][wW]/g,'ŭ');
-		enhavo = enhavo.replace(/C[wW]/g,'Ĉ');
-		enhavo = enhavo.replace(/G[wW]/g,'Ĝ');
-		enhavo = enhavo.replace(/H[wW]/g,'Ĥ');
-		enhavo = enhavo.replace(/J[wW]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[wW]/g,'Ŝ');
-		enhavo = enhavo.replace(/[UV][wW]/g,'Ŭ');
+		enhavo = enhavo.replace(/c[wW]/g,'ĉ')
+					   .replace(/g[wW]/g,'ĝ')
+					   .replace(/h[wW]/g,'ĥ')
+					   .replace(/j[wW]/g,'ĵ')
+					   .replace(/s[wW]/g,'ŝ')
+					   .replace(/[uv][wW]/g,'ŭ')
+					   .replace(/C[wW]/g,'Ĉ')
+					   .replace(/G[wW]/g,'Ĝ')
+					   .replace(/H[wW]/g,'Ĥ')
+					   .replace(/J[wW]/g,'Ĵ')
+					   .replace(/S[wW]/g,'Ŝ')
+					   .replace(/[UV][wW]/g,'Ŭ');
 	}
 
 	if (y_sistemo) {
-		enhavo = enhavo.replace(/c[yY]/g,'ĉ');
-		enhavo = enhavo.replace(/g[yY]/g,'ĝ');
-		enhavo = enhavo.replace(/h[yY]/g,'ĥ');
-		enhavo = enhavo.replace(/j[yY]/g,'ĵ');
-		enhavo = enhavo.replace(/s[yY]/g,'ŝ');
-		enhavo = enhavo.replace(/[uvw][yY]/g,'ŭ');
-		enhavo = enhavo.replace(/C[yY]/g,'Ĉ');
-		enhavo = enhavo.replace(/G[yY]/g,'Ĝ');
-		enhavo = enhavo.replace(/H[yY]/g,'Ĥ');
-		enhavo = enhavo.replace(/J[yY]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[yY]/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW][yY]/g,'Ŭ');
+		enhavo = enhavo.replace(/c[yY]/g,'ĉ')
+					   .replace(/g[yY]/g,'ĝ')
+					   .replace(/h[yY]/g,'ĥ')
+					   .replace(/j[yY]/g,'ĵ')
+					   .replace(/s[yY]/g,'ŝ')
+					   .replace(/[uvw][yY]/g,'ŭ')
+					   .replace(/C[yY]/g,'Ĉ')
+					   .replace(/G[yY]/g,'Ĝ')
+					   .replace(/H[yY]/g,'Ĥ')
+					   .replace(/J[yY]/g,'Ĵ')
+					   .replace(/S[yY]/g,'Ŝ')
+					   .replace(/[UVW][yY]/g,'Ŭ');
 	}
 
 	if (pre_kareto_sistemo) {
-		enhavo = enhavo.replace(/\^c/g,'ĉ');
-		enhavo = enhavo.replace(/\^g/g,'ĝ');
-		enhavo = enhavo.replace(/\^h/g,'ĥ');
-		enhavo = enhavo.replace(/\^j/g,'ĵ');
-		enhavo = enhavo.replace(/\^s/g,'ŝ');
-		enhavo = enhavo.replace(/[\^\~][uvw]/g,'ŭ');
-		enhavo = enhavo.replace(/\^C/g,'Ĉ');
-		enhavo = enhavo.replace(/\^G/g,'Ĝ');
-		enhavo = enhavo.replace(/\^H/g,'Ĥ');
-		enhavo = enhavo.replace(/\^J/g,'Ĵ');
-		enhavo = enhavo.replace(/\^S/g,'Ŝ');
-		enhavo = enhavo.replace(/[\^\~][UVW]/g,'Ŭ');
+		enhavo = enhavo.replace(/\^c/g,'ĉ')
+					   .replace(/\^g/g,'ĝ')
+					   .replace(/\^h/g,'ĥ')
+					   .replace(/\^j/g,'ĵ')
+					   .replace(/\^s/g,'ŝ')
+					   .replace(/[\^\~][uvw]/g,'ŭ')
+					   .replace(/\^C/g,'Ĉ')
+					   .replace(/\^G/g,'Ĝ')
+					   .replace(/\^H/g,'Ĥ')
+					   .replace(/\^J/g,'Ĵ')
+					   .replace(/\^S/g,'Ŝ')
+					   .replace(/[\^\~][UVW]/g,'Ŭ');
 	}
 
 	if (apostrophe_sistemo) {
-		enhavo = enhavo.replace(/c\'/g,'ĉ');
-		enhavo = enhavo.replace(/g\'/g,'ĝ');
-		enhavo = enhavo.replace(/h\'/g,'ĥ');
-		enhavo = enhavo.replace(/j\'/g,'ĵ');
-		enhavo = enhavo.replace(/s\'/g,'ŝ');
-		enhavo = enhavo.replace(/[uvw]\'/g,'ŭ');
-		enhavo = enhavo.replace(/C\'/g,'Ĉ');
-		enhavo = enhavo.replace(/G\'/g,'Ĝ');
-		enhavo = enhavo.replace(/H\'/g,'Ĥ');
-		enhavo = enhavo.replace(/J\'/g,'Ĵ');
-		enhavo = enhavo.replace(/S\'/g,'Ŝ');
-		enhavo = enhavo.replace(/[UVW]\'/g,'Ŭ');
+		enhavo = enhavo.replace(/c\'/g,'ĉ')
+					   .replace(/g\'/g,'ĝ')
+					   .replace(/h\'/g,'ĥ')
+					   .replace(/j\'/g,'ĵ')
+					   .replace(/s\'/g,'ŝ')
+					   .replace(/[uvw]\'/g,'ŭ')
+					   .replace(/C\'/g,'Ĉ')
+					   .replace(/G\'/g,'Ĝ')
+					   .replace(/H\'/g,'Ĥ')
+					   .replace(/J\'/g,'Ĵ')
+					   .replace(/S\'/g,'Ŝ')
+					   .replace(/[UVW]\'/g,'Ŭ');
 	}
 
 	if (pre_apostrophe_sistemo) {
-		enhavo = enhavo.replace(/\'c/g,'ĉ');
-		enhavo = enhavo.replace(/\'g/g,'ĝ');
-		enhavo = enhavo.replace(/\'h/g,'ĥ');
-		enhavo = enhavo.replace(/\'j/g,'ĵ');
-		enhavo = enhavo.replace(/\'s/g,'ŝ');
-		enhavo = enhavo.replace(/\'[uvw]/g,'ŭ');
-		enhavo = enhavo.replace(/\'C/g,'Ĉ');
-		enhavo = enhavo.replace(/\'G/g,'Ĝ');
-		enhavo = enhavo.replace(/\'H/g,'Ĥ');
-		enhavo = enhavo.replace(/\'J/g,'Ĵ');
-		enhavo = enhavo.replace(/\'S/g,'Ŝ');
-		enhavo = enhavo.replace(/\'[UVW]/g,'Ŭ');
+		enhavo = enhavo.replace(/\'c/g,'ĉ')
+					   .replace(/\'g/g,'ĝ')
+					   .replace(/\'h/g,'ĥ')
+					   .replace(/\'j/g,'ĵ')
+					   .replace(/\'s/g,'ŝ')
+					   .replace(/\'[uvw]/g,'ŭ')
+					   .replace(/\'C/g,'Ĉ')
+					   .replace(/\'G/g,'Ĝ')
+					   .replace(/\'H/g,'Ĥ')
+					   .replace(/\'J/g,'Ĵ')
+					   .replace(/\'S/g,'Ŝ')
+					   .replace(/\'[UVW]/g,'Ŭ');
 	}
 
 	if (angla_stila_sistemo) {
-		enhavo = enhavo.replace(/c[hH]/g,'ĉ');
-		enhavo = enhavo.replace(/t[sS]/g,'c');
-		enhavo = enhavo.replace(/d[gG]/g,'ĝ');
-		enhavo = enhavo.replace(/k[hH]/g,'ĥ');
-		enhavo = enhavo.replace(/j/g,'ĵ');
-		enhavo = enhavo.replace(/y/g,'j');
-		enhavo = enhavo.replace(/s[hH]/g,'ŝ');
-		enhavo = enhavo.replace(/w/g,'ŭ');
-		enhavo = enhavo.replace(/C[hH]/g,'Ĉ');
-		enhavo = enhavo.replace(/T[sS]/g,'C');
-		enhavo = enhavo.replace(/D[gG]/g,'Ĝ');
-		enhavo = enhavo.replace(/K[hH]/g,'Ĥ');
-		enhavo = enhavo.replace(/J/g,'Ĵ');
-		enhavo = enhavo.replace(/Y/g,'J');
-		enhavo = enhavo.replace(/S[hH]/g,'Ŝ');
-		enhavo = enhavo.replace(/W/g,'Ŭ');
+		enhavo = enhavo.replace(/c[hH]/g,'ĉ')
+					   .replace(/t[sS]/g,'c')
+					   .replace(/d[gG]/g,'ĝ')
+					   .replace(/k[hH]/g,'ĥ')
+					   .replace(/j/g,'ĵ')
+					   .replace(/y/g,'j')
+					   .replace(/s[hH]/g,'ŝ')
+					   .replace(/w/g,'ŭ')
+					   .replace(/C[hH]/g,'Ĉ')
+					   .replace(/T[sS]/g,'C')
+					   .replace(/D[gG]/g,'Ĝ')
+					   .replace(/K[hH]/g,'Ĥ')
+					   .replace(/J/g,'Ĵ')
+					   .replace(/Y/g,'J')
+					   .replace(/S[hH]/g,'Ŝ')
+					   .replace(/W/g,'Ŭ');
 	}
 
 	if (malregula_sistemo) {
-		enhavo = enhavo.replace(/c[yY]/g,'ĉ');
-		enhavo = enhavo.replace(/x[gG]/g,'ĝ');
-		enhavo = enhavo.replace(/q[hH]/g,'ĥ');
-		enhavo = enhavo.replace(/x[jJ]/g,'ĵ');
-		enhavo = enhavo.replace(/s[yY]/g,'ŝ');
-		enhavo = enhavo.replace(/w/g,'ŭ');
-		enhavo = enhavo.replace(/C[yY]/g,'Ĉ');
-		enhavo = enhavo.replace(/X[gG]/g,'Ĝ');
-		enhavo = enhavo.replace(/Q[hH]/g,'Ĥ');
-		enhavo = enhavo.replace(/X[jJ]/g,'Ĵ');
-		enhavo = enhavo.replace(/S[yY]/g,'Ŝ');
-		enhavo = enhavo.replace(/W/g,'Ŭ');
+		enhavo = enhavo.replace(/c[yY]/g,'ĉ')
+					   .replace(/x[gG]/g,'ĝ')
+					   .replace(/q[hH]/g,'ĥ')
+					   .replace(/x[jJ]/g,'ĵ')
+					   .replace(/s[yY]/g,'ŝ')
+					   .replace(/w/g,'ŭ')
+					   .replace(/C[yY]/g,'Ĉ')
+					   .replace(/X[gG]/g,'Ĝ')
+					   .replace(/Q[hH]/g,'Ĥ')
+					   .replace(/X[jJ]/g,'Ĵ')
+					   .replace(/S[yY]/g,'Ŝ')
+					   .replace(/W/g,'Ŭ');
 	}
 
-	document.getElementById('enhavo').value = enhavo;
+	elemento('enhavo').value = enhavo;
 }
 
 function konvertuAlAscii() {
-	var enhavo = document.getElementById('enhavo').value;
+	var enhavo = elemento('enhavo').value;
 
-	var anstatauigo = document.getElementById('anstatauigo').checked;
-	var grekaj = document.getElementById('grekaj').checked;
-	var h_sistemo = document.getElementById('h_sistemo').checked;
-	var x_sistemo = document.getElementById('x_sistemo').checked;
-	var plilongigita_h_sistemo = document.getElementById('plilongigita_h_sistemo').checked;
-	var pre_x_sistemo = document.getElementById('pre_x_sistemo').checked;
-	var q_sistemo = document.getElementById('q_sistemo').checked;
-	var w_sistemo = document.getElementById('w_sistemo').checked;
-	var y_sistemo = document.getElementById('y_sistemo').checked;
-	var kareto_sistemo = document.getElementById('kareto_sistemo').checked;
-	var pre_kareto_sistemo = document.getElementById('pre_kareto_sistemo').checked;
-	var apostrophe_sistemo = document.getElementById('apostrophe_sistemo').checked;
-	var pre_apostrophe_sistemo = document.getElementById('pre_apostrophe_sistemo').checked;
-	var angla_stila_sistemo = document.getElementById('angla_stila_sistemo').checked;
-	var malregula_sistemo = document.getElementById('malregula_sistemo').checked;
+	var anstatauigo = elemento('anstatauigo').checked;
+	var grekaj = elemento('grekaj').checked;
+	var h_sistemo = elemento('h_sistemo').checked;
+	var x_sistemo = elemento('x_sistemo').checked;
+	var plilongigita_h_sistemo = elemento('plilongigita_h_sistemo').checked;
+	var pre_x_sistemo = elemento('pre_x_sistemo').checked;
+	var q_sistemo = elemento('q_sistemo').checked;
+	var w_sistemo = elemento('w_sistemo').checked;
+	var y_sistemo = elemento('y_sistemo').checked;
+	var kareto_sistemo = elemento('kareto_sistemo').checked;
+	var pre_kareto_sistemo = elemento('pre_kareto_sistemo').checked;
+	var apostrophe_sistemo = elemento('apostrophe_sistemo').checked;
+	var pre_apostrophe_sistemo = elemento('pre_apostrophe_sistemo').checked;
+	var angla_stila_sistemo = elemento('angla_stila_sistemo').checked;
+	var malregula_sistemo = elemento('malregula_sistemo').checked;
 
 	if (h_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'ch');
-		enhavo = enhavo.replace(/ĝ/g,'gh');
-		enhavo = enhavo.replace(/ĥ/g,'hh');
-		enhavo = enhavo.replace(/ĵ/g,'jh');
-		enhavo = enhavo.replace(/ŝ/g,'sh');
-		enhavo = enhavo.replace(/Ĉ/g,'Ch');
-		enhavo = enhavo.replace(/Ĝ/g,'Gh');
-		enhavo = enhavo.replace(/Ĥ/g,'Hh');
-		enhavo = enhavo.replace(/Ĵ/g,'Jh');
-		enhavo = enhavo.replace(/Ŝ/g,'Sh');
+		enhavo = enhavo.replace(/ĉ/g,'ch')
+					   .replace(/ĝ/g,'gh')
+					   .replace(/ĥ/g,'hh')
+					   .replace(/ĵ/g,'jh')
+					   .replace(/ŝ/g,'sh')
+					   .replace(/Ĉ/g,'Ch')
+					   .replace(/Ĝ/g,'Gh')
+					   .replace(/Ĥ/g,'Hh')
+					   .replace(/Ĵ/g,'Jh')
+					   .replace(/Ŝ/g,'Sh');
 	}
 
 	if (x_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'cx');
-		enhavo = enhavo.replace(/ĝ/g,'gx');
-		enhavo = enhavo.replace(/ĥ/g,'hx');
-		enhavo = enhavo.replace(/ĵ/g,'jx');
-		enhavo = enhavo.replace(/ŝ/g,'sx');
-		enhavo = enhavo.replace(/ŭ/g,'ux');
-		enhavo = enhavo.replace(/Ĉ/g,'Cx');
-		enhavo = enhavo.replace(/Ĝ/g,'Gx');
-		enhavo = enhavo.replace(/Ĥ/g,'Hx');
-		enhavo = enhavo.replace(/Ĵ/g,'Jx');
-		enhavo = enhavo.replace(/Ŝ/g,'Sx');
-		enhavo = enhavo.replace(/Ŭ/g,'Ux');
+		enhavo = enhavo.replace(/ĉ/g,'cx')
+					   .replace(/ĝ/g,'gx')
+					   .replace(/ĥ/g,'hx')
+					   .replace(/ĵ/g,'jx')
+					   .replace(/ŝ/g,'sx')
+					   .replace(/ŭ/g,'ux')
+					   .replace(/Ĉ/g,'Cx')
+					   .replace(/Ĝ/g,'Gx')
+					   .replace(/Ĥ/g,'Hx')
+					   .replace(/Ĵ/g,'Jx')
+					   .replace(/Ŝ/g,'Sx')
+					   .replace(/Ŭ/g,'Ux');
 	}
 
 	if (kareto_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'c^');
-		enhavo = enhavo.replace(/ĝ/g,'g^');
-		enhavo = enhavo.replace(/ĥ/g,'h^');
-		enhavo = enhavo.replace(/ĵ/g,'j^');
-		enhavo = enhavo.replace(/ŝ/g,'s^');
-		enhavo = enhavo.replace(/ŭ/g,'u~');
-		enhavo = enhavo.replace(/Ĉ/g,'C^');
-		enhavo = enhavo.replace(/Ĝ/g,'G^');
-		enhavo = enhavo.replace(/Ĥ/g,'H^');
-		enhavo = enhavo.replace(/Ĵ/g,'J^');
-		enhavo = enhavo.replace(/Ŝ/g,'S^');
-		enhavo = enhavo.replace(/Ŭ/g,'U~');
+		enhavo = enhavo.replace(/ĉ/g,'c^')
+					   .replace(/ĝ/g,'g^')
+					   .replace(/ĥ/g,'h^')
+					   .replace(/ĵ/g,'j^')
+					   .replace(/ŝ/g,'s^')
+					   .replace(/ŭ/g,'u~')
+					   .replace(/Ĉ/g,'C^')
+					   .replace(/Ĝ/g,'G^')
+					   .replace(/Ĥ/g,'H^')
+					   .replace(/Ĵ/g,'J^')
+					   .replace(/Ŝ/g,'S^')
+					   .replace(/Ŭ/g,'U~');
 	}
 
 	if (anstatauigo) {
-		enhavo = enhavo.replace(/ŭ/g,'w');
-		enhavo = enhavo.replace(/Ŭ/g,'W');
+		enhavo = enhavo.replace(/ŭ/g,'w')
+					   .replace(/Ŭ/g,'W');
 	}
 
 	if (grekaj) {
-		enhavo = enhavo.replace(/ĉ/g,'ξ');
-		enhavo = enhavo.replace(/ĝ/g,'γ');
-		enhavo = enhavo.replace(/ĥ/g,'φ');
-		enhavo = enhavo.replace(/ĵ/g,'θ');
-		enhavo = enhavo.replace(/ŝ/g,'σ');
-		enhavo = enhavo.replace(/ŭ/g,'υ');
-		enhavo = enhavo.replace(/Ĉ/g,'Ξ');
-		enhavo = enhavo.replace(/Ĝ/g,'Γ');
-		enhavo = enhavo.replace(/Ĥ/g,'Φ');
-		enhavo = enhavo.replace(/Ĵ/g,'Θ');
-		enhavo = enhavo.replace(/Ŝ/g,'Σ');
-		enhavo = enhavo.replace(/Ŭ/g,'Υ');
+		enhavo = enhavo.replace(/ĉ/g,'ξ')
+					   .replace(/ĝ/g,'γ')
+					   .replace(/ĥ/g,'χ')
+					   .replace(/ĵ/g,'θ')
+					   .replace(/ŝ/g,'σ')
+					   .replace(/ŭ/g,'υ')
+					   .replace(/Ĉ/g,'Ξ')
+					   .replace(/Ĝ/g,'Γ')
+					   .replace(/Ĥ/g,'Χ')
+					   .replace(/Ĵ/g,'Θ')
+					   .replace(/Ŝ/g,'Σ')
+					   .replace(/Ŭ/g,'Υ');
 	}
 
 	if (q_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'cq');
-		enhavo = enhavo.replace(/ĝ/g,'gq');
-		enhavo = enhavo.replace(/ĥ/g,'hq');
-		enhavo = enhavo.replace(/ĵ/g,'jq');
-		enhavo = enhavo.replace(/ŝ/g,'sq');
-		enhavo = enhavo.replace(/ŭ/g,'uq');
-		enhavo = enhavo.replace(/Ĉ/g,'Cq');
-		enhavo = enhavo.replace(/Ĝ/g,'Gq');
-		enhavo = enhavo.replace(/Ĥ/g,'Hq');
-		enhavo = enhavo.replace(/Ĵ/g,'Jq');
-		enhavo = enhavo.replace(/Ŝ/g,'Sq');
-		enhavo = enhavo.replace(/Ŭ/g,'Uq');
+		enhavo = enhavo.replace(/ĉ/g,'cq')
+					   .replace(/ĝ/g,'gq')
+					   .replace(/ĥ/g,'hq')
+					   .replace(/ĵ/g,'jq')
+					   .replace(/ŝ/g,'sq')
+					   .replace(/ŭ/g,'uq')
+					   .replace(/Ĉ/g,'Cq')
+					   .replace(/Ĝ/g,'Gq')
+					   .replace(/Ĥ/g,'Hq')
+					   .replace(/Ĵ/g,'Jq')
+					   .replace(/Ŝ/g,'Sq')
+					   .replace(/Ŭ/g,'Uq');
 	}
 
 	if (plilongigita_h_sistemo) {
-		enhavo = enhavo.replace(/ĥ/g,'kh');
-		enhavo = enhavo.replace(/ŭ/g,'vh');
-		enhavo = enhavo.replace(/Ĥ/g,'Kh');
-		enhavo = enhavo.replace(/Ŭ/g,'Vh');
+		enhavo = enhavo.replace(/ĥ/g,'kh')
+					   .replace(/ŭ/g,'vh')
+					   .replace(/Ĥ/g,'Kh')
+					   .replace(/Ŭ/g,'Vh');
 	}
 
 	if (pre_x_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'xc');
-		enhavo = enhavo.replace(/ĝ/g,'xg');
-		enhavo = enhavo.replace(/ĥ/g,'xh');
-		enhavo = enhavo.replace(/ĵ/g,'xj');
-		enhavo = enhavo.replace(/ŝ/g,'xs');
-		enhavo = enhavo.replace(/ŭ/g,'xu');
-		enhavo = enhavo.replace(/Ĉ/g,'Xc');
-		enhavo = enhavo.replace(/Ĝ/g,'Xg');
-		enhavo = enhavo.replace(/Ĥ/g,'Xh');
-		enhavo = enhavo.replace(/Ĵ/g,'Xj');
-		enhavo = enhavo.replace(/Ŝ/g,'Xs');
-		enhavo = enhavo.replace(/Ŭ/g,'Xu');
+		enhavo = enhavo.replace(/ĉ/g,'xc')
+					   .replace(/ĝ/g,'xg')
+					   .replace(/ĥ/g,'xh')
+					   .replace(/ĵ/g,'xj')
+					   .replace(/ŝ/g,'xs')
+					   .replace(/ŭ/g,'xu')
+					   .replace(/Ĉ/g,'Xc')
+					   .replace(/Ĝ/g,'Xg')
+					   .replace(/Ĥ/g,'Xh')
+					   .replace(/Ĵ/g,'Xj')
+					   .replace(/Ŝ/g,'Xs')
+					   .replace(/Ŭ/g,'Xu');
 	}
 
 	if (w_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'cw');
-		enhavo = enhavo.replace(/ĝ/g,'gw');
-		enhavo = enhavo.replace(/ĥ/g,'hw');
-		enhavo = enhavo.replace(/ĵ/g,'jw');
-		enhavo = enhavo.replace(/ŝ/g,'sw');
-		enhavo = enhavo.replace(/ŭ/g,'uw');
-		enhavo = enhavo.replace(/Ĉ/g,'Cw');
-		enhavo = enhavo.replace(/Ĝ/g,'Gw');
-		enhavo = enhavo.replace(/Ĥ/g,'Hw');
-		enhavo = enhavo.replace(/Ĵ/g,'Jw');
-		enhavo = enhavo.replace(/Ŝ/g,'Sw');
-		enhavo = enhavo.replace(/Ŭ/g,'Uw');
+		enhavo = enhavo.replace(/ĉ/g,'cw')
+					   .replace(/ĝ/g,'gw')
+					   .replace(/ĥ/g,'hw')
+					   .replace(/ĵ/g,'jw')
+					   .replace(/ŝ/g,'sw')
+					   .replace(/ŭ/g,'uw')
+					   .replace(/Ĉ/g,'Cw')
+					   .replace(/Ĝ/g,'Gw')
+					   .replace(/Ĥ/g,'Hw')
+					   .replace(/Ĵ/g,'Jw')
+					   .replace(/Ŝ/g,'Sw')
+					   .replace(/Ŭ/g,'Uw');
 	}
 
 	if (y_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'cy');
-		enhavo = enhavo.replace(/ĝ/g,'gy');
-		enhavo = enhavo.replace(/ĥ/g,'hy');
-		enhavo = enhavo.replace(/ĵ/g,'jy');
-		enhavo = enhavo.replace(/ŝ/g,'sy');
-		enhavo = enhavo.replace(/ŭ/g,'uy');
-		enhavo = enhavo.replace(/Ĉ/g,'Cy');
-		enhavo = enhavo.replace(/Ĝ/g,'Gy');
-		enhavo = enhavo.replace(/Ĥ/g,'Hy');
-		enhavo = enhavo.replace(/Ĵ/g,'Jy');
-		enhavo = enhavo.replace(/Ŝ/g,'Sy');
-		enhavo = enhavo.replace(/Ŭ/g,'Uy');
+		enhavo = enhavo.replace(/ĉ/g,'cy')
+					   .replace(/ĝ/g,'gy')
+					   .replace(/ĥ/g,'hy')
+					   .replace(/ĵ/g,'jy')
+					   .replace(/ŝ/g,'sy')
+					   .replace(/ŭ/g,'uy')
+					   .replace(/Ĉ/g,'Cy')
+					   .replace(/Ĝ/g,'Gy')
+					   .replace(/Ĥ/g,'Hy')
+					   .replace(/Ĵ/g,'Jy')
+					   .replace(/Ŝ/g,'Sy')
+					   .replace(/Ŭ/g,'Uy');
 	}
 
 	if (pre_kareto_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'^c');
-		enhavo = enhavo.replace(/ĝ/g,'^g');
-		enhavo = enhavo.replace(/ĥ/g,'^h');
-		enhavo = enhavo.replace(/ĵ/g,'^j');
-		enhavo = enhavo.replace(/ŝ/g,'^s');
-		enhavo = enhavo.replace(/ŭ/g,'~u');
-		enhavo = enhavo.replace(/Ĉ/g,'^C');
-		enhavo = enhavo.replace(/Ĝ/g,'^G');
-		enhavo = enhavo.replace(/Ĥ/g,'^H');
-		enhavo = enhavo.replace(/Ĵ/g,'^J');
-		enhavo = enhavo.replace(/Ŝ/g,'^S');
-		enhavo = enhavo.replace(/Ŭ/g,'~U');
+		enhavo = enhavo.replace(/ĉ/g,'^c')
+					   .replace(/ĝ/g,'^g')
+					   .replace(/ĥ/g,'^h')
+					   .replace(/ĵ/g,'^j')
+					   .replace(/ŝ/g,'^s')
+					   .replace(/ŭ/g,'~u')
+					   .replace(/Ĉ/g,'^C')
+					   .replace(/Ĝ/g,'^G')
+					   .replace(/Ĥ/g,'^H')
+					   .replace(/Ĵ/g,'^J')
+					   .replace(/Ŝ/g,'^S')
+					   .replace(/Ŭ/g,'~U');
 	}
 
 	if (apostrophe_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'c\'');
-		enhavo = enhavo.replace(/ĝ/g,'g\'');
-		enhavo = enhavo.replace(/ĥ/g,'h\'');
-		enhavo = enhavo.replace(/ĵ/g,'j\'');
-		enhavo = enhavo.replace(/ŝ/g,'s\'');
-		enhavo = enhavo.replace(/ŭ/g,'u\'');
-		enhavo = enhavo.replace(/Ĉ/g,'C\'');
-		enhavo = enhavo.replace(/Ĝ/g,'G\'');
-		enhavo = enhavo.replace(/Ĥ/g,'H\'');
-		enhavo = enhavo.replace(/Ĵ/g,'J\'');
-		enhavo = enhavo.replace(/Ŝ/g,'S\'');
-		enhavo = enhavo.replace(/Ŭ/g,'U\'');
+		enhavo = enhavo.replace(/ĉ/g,'c\'')
+					   .replace(/ĝ/g,'g\'')
+					   .replace(/ĥ/g,'h\'')
+					   .replace(/ĵ/g,'j\'')
+					   .replace(/ŝ/g,'s\'')
+					   .replace(/ŭ/g,'u\'')
+					   .replace(/Ĉ/g,'C\'')
+					   .replace(/Ĝ/g,'G\'')
+					   .replace(/Ĥ/g,'H\'')
+					   .replace(/Ĵ/g,'J\'')
+					   .replace(/Ŝ/g,'S\'')
+					   .replace(/Ŭ/g,'U\'');
 	}
 
 	if (pre_apostrophe_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'\'c');
-		enhavo = enhavo.replace(/ĝ/g,'\'g');
-		enhavo = enhavo.replace(/ĥ/g,'\'h');
-		enhavo = enhavo.replace(/ĵ/g,'\'j');
-		enhavo = enhavo.replace(/ŝ/g,'\'s');
-		enhavo = enhavo.replace(/ŭ/g,'\'u');
-		enhavo = enhavo.replace(/Ĉ/g,'\'C');
-		enhavo = enhavo.replace(/Ĝ/g,'\'G');
-		enhavo = enhavo.replace(/Ĥ/g,'\'H');
-		enhavo = enhavo.replace(/Ĵ/g,'\'J');
-		enhavo = enhavo.replace(/Ŝ/g,'\'S');
-		enhavo = enhavo.replace(/Ŭ/g,'\'U');
+		enhavo = enhavo.replace(/ĉ/g,'\'c')
+					   .replace(/ĝ/g,'\'g')
+					   .replace(/ĥ/g,'\'h')
+					   .replace(/ĵ/g,'\'j')
+					   .replace(/ŝ/g,'\'s')
+					   .replace(/ŭ/g,'\'u')
+					   .replace(/Ĉ/g,'\'C')
+					   .replace(/Ĝ/g,'\'G')
+					   .replace(/Ĥ/g,'\'H')
+					   .replace(/Ĵ/g,'\'J')
+					   .replace(/Ŝ/g,'\'S')
+					   .replace(/Ŭ/g,'\'U');
 	}
 
 	if (angla_stila_sistemo) {
-		enhavo = enhavo.replace(/c/g,'ts');
-		enhavo = enhavo.replace(/ĉ/g,'ch');
-		enhavo = enhavo.replace(/ĝ/g,'dg');
-		enhavo = enhavo.replace(/ĥ/g,'kh');
-		enhavo = enhavo.replace(/j/g,'y');
-		enhavo = enhavo.replace(/ĵ/g,'j');
-		enhavo = enhavo.replace(/ŝ/g,'sh');
-		enhavo = enhavo.replace(/ŭ/g,'w');
-		enhavo = enhavo.replace(/C/g,'Ts');
-		enhavo = enhavo.replace(/Ĉ/g,'Ch');
-		enhavo = enhavo.replace(/Ĝ/g,'Dg');
-		enhavo = enhavo.replace(/Ĥ/g,'Kh');
-		enhavo = enhavo.replace(/J/g,'Y');
-		enhavo = enhavo.replace(/Ĵ/g,'J');
-		enhavo = enhavo.replace(/Ŝ/g,'Sh');
-		enhavo = enhavo.replace(/Ŭ/g,'W');
+		enhavo = enhavo.replace(/c/g,'ts')
+					   .replace(/ĉ/g,'ch')
+					   .replace(/ĝ/g,'dg')
+					   .replace(/ĥ/g,'kh')
+					   .replace(/j/g,'y')
+					   .replace(/ĵ/g,'j')
+					   .replace(/ŝ/g,'sh')
+					   .replace(/ŭ/g,'w')
+					   .replace(/C/g,'Ts')
+					   .replace(/Ĉ/g,'Ch')
+					   .replace(/Ĝ/g,'Dg')
+					   .replace(/Ĥ/g,'Kh')
+					   .replace(/J/g,'Y')
+					   .replace(/Ĵ/g,'J')
+					   .replace(/Ŝ/g,'Sh')
+					   .replace(/Ŭ/g,'W');
 	}
 
 	if (malregula_sistemo) {
-		enhavo = enhavo.replace(/ĉ/g,'cy');
-		enhavo = enhavo.replace(/ĝ/g,'xg');
-		enhavo = enhavo.replace(/ĥ/g,'qh');
-		enhavo = enhavo.replace(/ĵ/g,'xj');
-		enhavo = enhavo.replace(/ŝ/g,'sy');
-		enhavo = enhavo.replace(/ŭ/g,'w');
-		enhavo = enhavo.replace(/Ĉ/g,'Cy');
-		enhavo = enhavo.replace(/Ĝ/g,'Xg');
-		enhavo = enhavo.replace(/Ĥ/g,'Qh');
-		enhavo = enhavo.replace(/Ĵ/g,'Xj');
-		enhavo = enhavo.replace(/Ŝ/g,'Sy');
-		enhavo = enhavo.replace(/Ŭ/g,'W');
+		enhavo = enhavo.replace(/ĉ/g,'cy')
+					   .replace(/ĝ/g,'xg')
+					   .replace(/ĥ/g,'qh')
+					   .replace(/ĵ/g,'xj')
+					   .replace(/ŝ/g,'sy')
+					   .replace(/ŭ/g,'w')
+					   .replace(/Ĉ/g,'Cy')
+					   .replace(/Ĝ/g,'Xg')
+					   .replace(/Ĥ/g,'Qh')
+					   .replace(/Ĵ/g,'Xj')
+					   .replace(/Ŝ/g,'Sy')
+					   .replace(/Ŭ/g,'W');
 	}
 
-	document.getElementById('enhavo').value = enhavo;
+	elemento('enhavo').value = enhavo;
 }
 
 function aldonuStreketonPostAkcyento(vorto) {
@@ -584,8 +588,8 @@ function aldonuStreketonPostAkcyento(vorto) {
 }
 
 function katakanigo() {
-	var enhavo = document.getElementById('enhavo').value;
-	var reduktu_dependantajn = document.getElementById('reduktu_dependantajn').checked;
+	var enhavo = elemento('enhavo').value;
+	var reduktu_dependantajn = elemento('reduktu_dependantajn').checked;
 	var rezulto = "";
 
 	enhavo = enhavo.replace(/\-/g,'');
@@ -887,7 +891,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/[Xx]/g,'?');
 	enhavo = enhavo.replace(/\-/g,'ー');
 
-	document.getElementById('enhavo').value = enhavo;
+	elemento('enhavo').value = enhavo;
 }
 
 function malgranda() {
@@ -895,32 +899,32 @@ function malgranda() {
 	if (tiparaGrandeco <= 0) {
 		tiparaGrandeco = 1;
 	}
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 function dekdu() {
 	tiparaGrandeco = 12;
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 function dekkvar() {
 	tiparaGrandeco = 14;
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 function dekok() {
 	tiparaGrandeco = 18;
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 function granda() {
 	tiparaGrandeco++;
-	document.getElementById('enhavo').style.fontSize = tiparaGrandeco + 'px';
+	elemento('enhavo').style.fontSize = tiparaGrandeco + 'px';
 }
 
 function uzuJuliamoTiparon() {
-	var juliamo = document.getElementById('juliamo').checked;
-	var enhavo = document.getElementById('enhavo');
+	var juliamo = elemento('juliamo').checked;
+	var enhavo = elemento('enhavo');
 	if (juliamo) {
 		enhavo.setAttribute('class', 'juliamo enhavo');
 	} else {

@@ -640,7 +640,7 @@ function katakanigo() {
 	if (reduktu_dependantajn) {
 		enhavo = enhavo.replace(/[Ĉĉ]/g,'チュ');
 	} else {
-		enhavo = enhavo.replace(/[Ĉĉ]/g,'ツ゚');
+		enhavo = enhavo.replace(/[Ĉĉ]/g,'ツ゚ュ');
 	}
 
 	enhavo = enhavo.replace(/[Dd][Aa]/g,'ダ');
@@ -684,7 +684,7 @@ function katakanigo() {
 	if (reduktu_dependantajn) {
 		enhavo = enhavo.replace(/[Ĝĝ]/g,'ヂュ');
 	} else {
-		enhavo = enhavo.replace(/[Ĝĝ]/g,'ッ゙');
+		enhavo = enhavo.replace(/[Ĝĝ]/g,'ッ゙ュ');
 	}
 
 	enhavo = enhavo.replace(/[Hh][Aa]/g,'ハ');
@@ -887,8 +887,9 @@ function katakanigo() {
 	enhavo = enhavo.replace(/\./g,'。');
 	enhavo = enhavo.replace(/\?/g,'？');
 	enhavo = enhavo.replace(/\!/g,'！');
+	enhavo = enhavo.replace(/\"/g,'”');
+	enhavo = enhavo.replace(/\'/g,'’');
 
-	enhavo = enhavo.replace(/[Xx]/g,'?');
 	enhavo = enhavo.replace(/\-/g,'ー');
 
 	elemento('enhavo').value = enhavo;
@@ -930,6 +931,24 @@ function uzuJuliamoTiparon() {
 	} else {
 		enhavo.setAttribute('class', 'enhavo');
 	}
+}
+
+function malsyaltuCyiujn() {
+	elemento('anstatauigo').checked = false;
+	elemento('grekaj').checked = false;
+	elemento('h_sistemo').checked = false;
+	elemento('x_sistemo').checked = false;
+	elemento('plilongigita_h_sistemo').checked = false;
+	elemento('pre_x_sistemo').checked = false;
+	elemento('q_sistemo').checked = false;
+	elemento('w_sistemo').checked = false;
+	elemento('y_sistemo').checked = false;
+	elemento('kareto_sistemo').checked = false;
+	elemento('pre_kareto_sistemo').checked = false;
+	elemento('apostrophe_sistemo').checked = false;
+	elemento('pre_apostrophe_sistemo').checked = false;
+	elemento('angla_stila_sistemo').checked = false;
+	elemento('malregula_sistemo').checked = false;
 }
 
 

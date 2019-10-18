@@ -348,9 +348,9 @@ function konvertuAlEsperanto() {
 					   .replace(/Ou/g,'Oŭ')
 					   .replace(/C[hH]/g,'Ĉ')
 					   .replace(/J/g,'Ĝ')
-					   .replace(/k[hH]/g,'Ĥ')
+					   .replace(/K[hH]/g,'Ĥ')
 					   .replace(/Y/g,'J')
-					   .replace(/z[hH]/g,'Ĵ')
+					   .replace(/Z[hH]/g,'Ĵ')
 					   .replace(/S[hH]/g,'Ŝ')
 					   .replace(/Wa/g,'Ŭa')
 					   .replace(/We/g,'Ŭe')
@@ -690,6 +690,34 @@ function katakanigo() {
 	}
 	enhavo = rezulto;
 
+	
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Nn][Jj][Aa]/g,'ニャ');
+		enhavo = enhavo.replace(/[Nn][Jj][Ii]/g,'ニィ');
+		enhavo = enhavo.replace(/[Nn][Jj][Uu]/g,'ニュ');
+		enhavo = enhavo.replace(/[Nn][Jj][Ee]/g,'ニェ');
+		enhavo = enhavo.replace(/[Nn][Jj][Oo]/g,'ニョ');
+		enhavo = enhavo.replace(/[Nn][Jj]/g,'ニ');
+	} else {
+		enhavo = enhavo.replace(/[Nn][Jj][Aa]/g,'ㇴヤ');
+		enhavo = enhavo.replace(/[Nn][Jj][Ii]/g,'ㇴイィ');
+		enhavo = enhavo.replace(/[Nn][Jj][Uu]/g,'ㇴユ');
+		enhavo = enhavo.replace(/[Nn][Jj][Ee]/g,'ㇴイェ');
+		enhavo = enhavo.replace(/[Nn][Jj][Oo]/g,'ㇴヨ');
+		enhavo = enhavo.replace(/[Nn][Jj]/g,'ㇴィ');
+	}
+
+	enhavo = enhavo.replace(/[Dd][Zz][Aa]/g,'ッザ');
+	enhavo = enhavo.replace(/[Dd][Zz][Ii]/g,'ッズィ');
+	enhavo = enhavo.replace(/[Dd][Zz][Uu]/g,'ッズ');
+	enhavo = enhavo.replace(/[Dd][Zz][Ee]/g,'ッゼ');
+	enhavo = enhavo.replace(/[Dd][Zz][Oo]/g,'ッゾ');
+	if (reduktu_dependantajn) {
+		enhavo = enhavo.replace(/[Dd][Zz]/g,'ッズ');
+	} else {
+		enhavo = enhavo.replace(/[Dd][Zz]/g,'ッㇲ゙');
+	}
+
 	enhavo = enhavo.replace(/[Bb][Aa]/g,'バ');
 	enhavo = enhavo.replace(/[Bb][Ii]/g,'ビ');
 	enhavo = enhavo.replace(/[Bb][Uu]/g,'ブ');
@@ -953,7 +981,7 @@ function katakanigo() {
 	if (reduktu_dependantajn) {
 		enhavo = enhavo.replace(/[Zz]/g,'ズ');
 	} else {
-		enhavo = enhavo.replace(/[Zz]/g,'ㇲ゛');
+		enhavo = enhavo.replace(/[Zz]/g,'ㇲ゙');
 	}
 
 	enhavo = enhavo.replace(/[Aa]/g,'ア');

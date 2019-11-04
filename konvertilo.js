@@ -6,6 +6,7 @@ var alfabetoj = "ABCĈDEFGĜHĤIJĴKLMNOPQRSŜTUŬVWXYZabcĉdefgĝhĥijĵklmnopq
 var vokaloj = "AEIOUaeiou";
 
 var tiparaGrandeco = 12;
+var katakanigoInversigo = '';
 
 var ordinaj = [
 	'nuloa',
@@ -671,6 +672,7 @@ function katakanigo() {
 	var enhavo = elemento('enhavo').value;
 	var reduktu_dependantajn = elemento('reduktu_dependantajn').checked;
 	var rezulto = "";
+	katakanigoInversigo = enhavo;
 
 	enhavo = enhavo.replace(/\-/g,'');
 
@@ -1001,6 +1003,108 @@ function katakanigo() {
 	enhavo = enhavo.replace(/\-/g,'ー');
 
 	elemento('enhavo').value = enhavo;
+	elemento('revertu').disabled = undefined;
+}
+
+function revertu() {
+	elemento('enhavo').value = katakanigoInversigo;
+	katakanigoInversigo = '';
+	elemento('revertu').disabled = 'disabled';
+	elemento('revertuMultBajtoj').disabled = 'disabled';
+}
+
+function multajBajtoj() {
+	var enhavo = elemento('enhavo').value;
+	var reduktu_dependantajn = elemento('reduktu_dependantajn').checked;
+	var rezulto = "";
+	jiliamoInversigo = enhavo;
+
+	enhavo = enhavo.replace(/\-/g,'ー');
+	enhavo = enhavo.replace(/ /g,' ');
+	enhavo = enhavo.replace(/\ /g,' ');
+	enhavo = enhavo.replace(/\./g,'．');
+	enhavo = enhavo.replace(/\,/g,'，');
+	enhavo = enhavo.replace(/\?/g,'？');
+	enhavo = enhavo.replace(/\!/g,'！');
+	enhavo = enhavo.replace(/\"/g,'”');
+	enhavo = enhavo.replace(/\'/g,'’');
+
+	enhavo = enhavo.replace(/a/g,'ａ');
+	enhavo = enhavo.replace(/b/g,'ｂ');
+	enhavo = enhavo.replace(/c/g,'ｃ');
+	enhavo = enhavo.replace(/d/g,'ｄ');
+	enhavo = enhavo.replace(/e/g,'ｅ');
+	enhavo = enhavo.replace(/f/g,'ｆ');
+	enhavo = enhavo.replace(/g/g,'ｇ');
+	enhavo = enhavo.replace(/h/g,'ｈ');
+	enhavo = enhavo.replace(/i/g,'ｉ');
+	enhavo = enhavo.replace(/j/g,'ｊ');
+	enhavo = enhavo.replace(/k/g,'ｋ');
+	enhavo = enhavo.replace(/l/g,'ｌ');
+	enhavo = enhavo.replace(/m/g,'ｍ');
+	enhavo = enhavo.replace(/n/g,'ｎ');
+	enhavo = enhavo.replace(/o/g,'ｏ');
+	enhavo = enhavo.replace(/p/g,'ｐ');
+	enhavo = enhavo.replace(/q/g,'ｑ');
+	enhavo = enhavo.replace(/r/g,'ｒ');
+	enhavo = enhavo.replace(/s/g,'ｓ');
+	enhavo = enhavo.replace(/t/g,'ｔ');
+	enhavo = enhavo.replace(/u/g,'ｕ');
+	enhavo = enhavo.replace(/v/g,'ｖ');
+	enhavo = enhavo.replace(/w/g,'ｗ');
+	enhavo = enhavo.replace(/x/g,'ｘ');
+	enhavo = enhavo.replace(/y/g,'ｙ');
+	enhavo = enhavo.replace(/z/g,'ｚ');
+	enhavo = enhavo.replace(/A/g,'Ａ');
+	enhavo = enhavo.replace(/B/g,'Ｂ');
+	enhavo = enhavo.replace(/C/g,'Ｃ');
+	enhavo = enhavo.replace(/D/g,'Ｄ');
+	enhavo = enhavo.replace(/E/g,'Ｅ');
+	enhavo = enhavo.replace(/F/g,'Ｆ');
+	enhavo = enhavo.replace(/G/g,'Ｇ');
+	enhavo = enhavo.replace(/H/g,'Ｈ');
+	enhavo = enhavo.replace(/I/g,'Ｉ');
+	enhavo = enhavo.replace(/J/g,'Ｊ');
+	enhavo = enhavo.replace(/K/g,'Ｋ');
+	enhavo = enhavo.replace(/L/g,'Ｌ');
+	enhavo = enhavo.replace(/M/g,'Ｍ');
+	enhavo = enhavo.replace(/N/g,'Ｎ');
+	enhavo = enhavo.replace(/O/g,'Ｏ');
+	enhavo = enhavo.replace(/P/g,'Ｐ');
+	enhavo = enhavo.replace(/Q/g,'Ｑ');
+	enhavo = enhavo.replace(/R/g,'Ｒ');
+	enhavo = enhavo.replace(/S/g,'Ｓ');
+	enhavo = enhavo.replace(/T/g,'Ｔ');
+	enhavo = enhavo.replace(/U/g,'Ｕ');
+	enhavo = enhavo.replace(/V/g,'Ｖ');
+	enhavo = enhavo.replace(/W/g,'Ｗ');
+	enhavo = enhavo.replace(/X/g,'Ｘ');
+	enhavo = enhavo.replace(/Y/g,'Ｙ');
+	enhavo = enhavo.replace(/Z/g,'Ｚ');
+
+	enhavo = enhavo.replace(/ĉ/g,'㍍');
+	enhavo = enhavo.replace(/ĝ/g,'㌔');
+	enhavo = enhavo.replace(/ĥ/g,'㌃');
+	enhavo = enhavo.replace(/ĵ/g,'㌍');
+	enhavo = enhavo.replace(/ŝ/g,'㌫');
+	enhavo = enhavo.replace(/ŭ/g,'㌦');
+	enhavo = enhavo.replace(/Ĉ/g,'㌢');
+	enhavo = enhavo.replace(/Ĝ/g,'㌘');
+	enhavo = enhavo.replace(/Ĥ/g,'㌶');
+	enhavo = enhavo.replace(/Ĵ/g,'㌻');
+	enhavo = enhavo.replace(/Ŝ/g,'㍗');
+	enhavo = enhavo.replace(/Ŭ/g,'㌧');
+	enhavo = enhavo.replace(/\¥/g,'㍊');
+
+	elemento('enhavo').value = enhavo;
+	elemento('revertuMultBajtoj').disabled = undefined;
+}
+
+function revertuMultBajtoj() {
+	elemento('enhavo').value = jiliamoInversigo;
+	katakanigoInversigo = '';
+	elemento('revertu').disabled = 'disabled';
+	elemento('revertuMultBajtoj').disabled = 'disabled';
 }
 
 function malgranda() {

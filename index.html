@@ -19,51 +19,56 @@ Mi aparte interesiĝas pri la historio en la ĉe Ĉeĥo.
 
 Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 
-<button id="to_esperanto" onclick="konvertuAlEsperanto();">Konvertu ASCII alfabeton al Esperanto alfabeto (ch &rarr; ĉ)</button>
+<button id="to_esperanto" onclick="konvertuAlEsperanto();">ASCII &rarr; Esperanto (ch &rarr; ĉ)</button>
 <br />
-<button id="to_ascii" onclick="konvertuAlAscii();">Konvertu Esperantan alfabeton al ASCII alfabeto (ĉ &rarr; ch)</button>
+<button id="to_ascii" onclick="konvertuAlAscii();">Esperanto &rarr; ASCII (ĉ &rarr; ch)</button>
 <br />
-<button id="katakanigo" onclick="katakanigo();">Katakanigo (ĉa &rarr; チャ, neinversigebla)</button> <input type="checkbox" id="reduktu_dependantajn" /><label for="reduktu_dependantajn">Reduktu karakterojn dependantajn de medio</label>
+<button id="katakanigo" onclick="katakanigo();">Katakanigo (ĉa &rarr; チャ, ne konvertu dufoje)</button> <button id="revertu" disabled="disabled" onclick="revertu();">Revertu (チャ &rarr; ĉa)</button> <input type="checkbox" id="reduktu_dependantajn" /><label for="reduktu_dependantajn">Evitu ekologiajn dependajn karakterojn</label>
+<br />
+<br />
+<button id="to_mult_bajtoj" onclick="multajBajtoj();">Multaj-bajtoj por tiparo juliamo (ĉa &rarr; ㍍ａ, ne konvertu dufoje)</button> <button id="revertuMultBajtoj" disabled="disabled" onclick="revertuMultBajtoj();">Revertu (㍍ａ &rarr; ĉa)</button>
+<br />
+<span class="malgranda">Referenco: <a href="http://sukerasparo.com/sp004/font.html" target="_blank">ユリアーモフォント公開中 - ことのはアムリラート - sukerasparo</a></span>
 
 <br />
 
 <h4>Oficialaj Sistemoj</h4>
 <p>
-<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
+<input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
 
-<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
+<input type="checkbox" id="x_sistemo" onclick="xSistemoKontrolita(this.value);" checked="checked" /><label for="x_sistemo">X-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cx &rarr; ĉ, gx &rarr; ĝ, hx &rarr; ĥ, jx &rarr; ĵ, sx &rarr; ŝ, ux/vx/wx &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
+<input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
 </p>
 
 <h4>Neoficialaj Sistemoj</h4>
 <p>
-<input type="checkbox" id="plilongigita_h_sistemo" /><label for="plilongigita_h_sistemo">Plilongigita H-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;kh &rarr; ĥ, vh &rarr; ŭ</span></label><br />
+<input type="checkbox" id="plilongigita_h_sistemo" /><label for="plilongigita_h_sistemo">Plilongigita H-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;kh &rarr; ĥ, vh &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj<br /><span class="malgranda">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="anstatauigo" /><label for="anstatauigo">Anstataŭigo de ne uzataj alfabetoj<br /><span class="malgranda griza">&emsp;&emsp;&emsp;w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="grekaj" /><label for="grekaj">Anstataŭado de grekaj alfabetoj<br /><span class="malgranda">&emsp;&emsp;&emsp;&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &chi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</span></label><br />
+<input type="checkbox" id="grekaj" /><label for="grekaj">Anstataŭado de grekaj alfabetoj<br /><span class="malgranda griza">&emsp;&emsp;&emsp;&xi; &rarr; ĉ, &gamma; &rarr; ĝ, &chi; &rarr; ĥ, &theta; &rarr; ĵ, &sigma; &rarr; ŝ, &upsilon; &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="q_sistemo" /><label for="q_sistemo">Q-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cq &rarr; ĉ, gq &rarr; ĝ, hq &rarr; ĥ, jq &rarr; ĵ, sq &rarr; ŝ, uq,vq,wq &rarr; ŭ</span></label><br />
+<input type="checkbox" id="q_sistemo" /><label for="q_sistemo">Q-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cq &rarr; ĉ, gq &rarr; ĝ, hq &rarr; ĥ, jq &rarr; ĵ, sq &rarr; ŝ, uq,vq,wq &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
+<input type="checkbox" id="pre_x_sistemo" onclick="preXSistemoKontrolita(this.value);" /><label for="pre_x_sistemo">Prefala X-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;xc &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, xs &rarr; ŝ, xu/xv/xw &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="w_sistemo" /><label for="w_sistemo">W-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</span></label><br />
+<input type="checkbox" id="w_sistemo" /><label for="w_sistemo">W-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cw &rarr; ĉ, gw &rarr; ĝ, hw &rarr; ĥ, jw &rarr; ĵ, sw &rarr; ŝ, uw,vw &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
+<input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
 
 
-<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda griza">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="malregula_sistemo" /><label for="malregula_sistemo">Miksita sistemo<br /><span class="malgranda">&emsp;&emsp;&emsp;cy &rarr; ĉ, xg &rarr; ĝ, qh &rarr; ĥ, xj &rarr; ĵ, sy &rarr; ŝ, w &rarr; ŭ</span></label><br />
+<input type="checkbox" id="malregula_sistemo" /><label for="malregula_sistemo">Miksita sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cy &rarr; ĉ, xg &rarr; ĝ, qh &rarr; ĥ, xj &rarr; ĵ, sy &rarr; ŝ, w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="nova_helpalfabeto" /><label for="nova_helpalfabeto">Nova Helpalfabeto <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda">&emsp;&emsp;&emsp;ts &rarr; c, tc &rarr; ĉ, dj &rarr; ĝ, x &rarr; ĥ, y &rarr; j, j &rarr; ĵ, c &rarr; ŝ, wa/we/wo &rarr; ŭa/ŭe/ŭo, au/eu/ou &rarr; aŭ/eŭ/oŭ</span></label><br />
+<input type="checkbox" id="nova_helpalfabeto" /><label for="nova_helpalfabeto">Nova Helpalfabeto <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda griza">&emsp;&emsp;&emsp;ts &rarr; c, tc &rarr; ĉ, dj &rarr; ĝ, x &rarr; ĥ, y &rarr; j, j &rarr; ĵ, c &rarr; ŝ, wa/we/wo &rarr; ŭa/ŭe/ŭo, au/eu/ou &rarr; aŭ/eŭ/oŭ</span></label><br />
 </p>
 
 <input type="button" value="Malŝaltu ĉiujn" onclick="malsyaltuCyiujn()" />

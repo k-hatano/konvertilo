@@ -117,6 +117,7 @@ function konvertuAlEsperanto() {
 	var pre_apostrophe_sistemo = elemento('pre_apostrophe_sistemo').checked;
 	var angla_stila_sistemo = elemento('angla_stila_sistemo').checked;
 	var malregula_sistemo = elemento('malregula_sistemo').checked;
+	var malregula_sistemo_2 = elemento('malregula_sistemo_2').checked;
 	var nova_helpalfabeto = elemento('nova_helpalfabeto').checked;
 
 	if (h_sistemo) {
@@ -316,16 +317,31 @@ function konvertuAlEsperanto() {
 	if (malregula_sistemo) {
 		enhavo = enhavo.replace(/c[yY]/g,'ĉ')
 					   .replace(/x[gG]/g,'ĝ')
-					   .replace(/q[hH]/g,'ĥ')
+					   .replace(/x[hH]/g,'ĥ')
 					   .replace(/x[jJ]/g,'ĵ')
 					   .replace(/s[yY]/g,'ŝ')
 					   .replace(/w/g,'ŭ')
 					   .replace(/C[yY]/g,'Ĉ')
 					   .replace(/X[gG]/g,'Ĝ')
-					   .replace(/Q[hH]/g,'Ĥ')
+					   .replace(/X[hH]/g,'Ĥ')
 					   .replace(/X[jJ]/g,'Ĵ')
 					   .replace(/S[yY]/g,'Ŝ')
 					   .replace(/W/g,'Ŭ');
+	}
+
+	if (malregula_sistemo_2) {
+		enhavo = enhavo.replace(/c[jJ]/g,'ĉ')
+					   .replace(/d[xX]/g,'ĝ')
+					   .replace(/q/g,'ĥ')
+					   .replace(/x/g,'ĵ')
+					   .replace(/s[jJ]/g,'ŝ')
+					   .replace(/y/g,'ŭ')
+					   .replace(/C[jJ]/g,'Ĉ')
+					   .replace(/d[xX]/g,'Ĝ')
+					   .replace(/Q/g,'Ĥ')
+					   .replace(/X/g,'Ĵ')
+					   .replace(/S[jJ]/g,'Ŝ')
+					   .replace(/Y/g,'Ŭ');
 	}
 
 	if (nova_helpalfabeto) {
@@ -388,6 +404,7 @@ function konvertuAlAscii() {
 	var pre_apostrophe_sistemo = elemento('pre_apostrophe_sistemo').checked;
 	var angla_stila_sistemo = elemento('angla_stila_sistemo').checked;
 	var malregula_sistemo = elemento('malregula_sistemo').checked;
+	var malregula_sistemo_2 = elemento('malregula_sistemo_2').checked;
 	var nova_helpalfabeto = elemento('nova_helpalfabeto').checked;
 
 	if (h_sistemo) {
@@ -587,16 +604,31 @@ function konvertuAlAscii() {
 	if (malregula_sistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'cy')
 					   .replace(/ĝ/g,'xg')
-					   .replace(/ĥ/g,'qh')
+					   .replace(/ĥ/g,'xh')
 					   .replace(/ĵ/g,'xj')
 					   .replace(/ŝ/g,'sy')
 					   .replace(/ŭ/g,'w')
 					   .replace(/Ĉ/g,'Cy')
 					   .replace(/Ĝ/g,'Xg')
-					   .replace(/Ĥ/g,'Qh')
+					   .replace(/Ĥ/g,'Xh')
 					   .replace(/Ĵ/g,'Xj')
 					   .replace(/Ŝ/g,'Sy')
 					   .replace(/Ŭ/g,'W');
+	}
+
+	if (malregula_sistemo_2) {
+		enhavo = enhavo.replace(/ĉ/g,'cj')
+					   .replace(/ĝ/g,'dx')
+					   .replace(/ĥ/g,'q')
+					   .replace(/ĵ/g,'x')
+					   .replace(/ŝ/g,'sj')
+					   .replace(/ŭ/g,'y')
+					   .replace(/Ĉ/g,'Cj')
+					   .replace(/Ĝ/g,'Dx')
+					   .replace(/Ĥ/g,'Q')
+					   .replace(/Ĵ/g,'X')
+					   .replace(/Ŝ/g,'Sj')
+					   .replace(/Ŭ/g,'Y');
 	}
 
 	if (nova_helpalfabeto) {

@@ -24,6 +24,35 @@
 	font-family: juliamo;
 }
 
+.noto-sans {
+	font-family: noto-sans;
+}
+
+.sans-serif {
+	font-family: sans-serif;
+}
+
+.serif {
+	font-family: serif;
+}
+
+.monospace {
+	font-family: monospace;
+}
+
+.cursive {
+	font-family: cursive;
+}
+
+.fantasy {
+	font-family: fantasy;
+}
+
+summary {
+	font-size: large;
+	font-weight: bold;
+}
+
 @font-face {
   font-family: 'juliamo';
   src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff') format('woff');

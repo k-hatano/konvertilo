@@ -6,7 +6,17 @@
 </head>
 <body>
 
-<p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="dekdu" onclick="dekdu();">12</button><button id="dekkvar" onclick="dekkvar();">14</button><button id="dekok" onclick="dekok();">18</button><button id="granda" onclick="granda();">+</button>&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="juliamo" onclick="uzuJuliamoTiparon(this.value);" /><label for="juliamo" class="juliamo">Uzu juliamo tiparon</label></p>
+<!-- eniga formo -->
+
+<p>Tipara grandeco: <button id="malgranda" onclick="malgranda();">-</button><button id="dekdu" onclick="agorduTiparaGrandeco(12);">12</button><button id="dekkvar" onclick="agorduTiparaGrandeco(14);">14</button><button id="dekok" onclick="agorduTiparaGrandeco(18);">18</button><button id="dudekkvar" onclick="agorduTiparaGrandeco(24);">24</button><button id="granda" onclick="granda();">+</button>&nbsp;&nbsp;&nbsp;&nbsp;<label for="tiparo">Tiparo: </label><select id="tiparo" onchange="elektuTiparon(this.value)">
+	<option value="">(neniu)</option>
+	<option class="juliamo" value="juliamo">Juliamo</option>
+	<option class="sans-serif" value="sans-serif">Sans-Serif</option>
+	<option class="serif" value="serif">Serif</option>
+	<option class="monospace" value="monospace">Monospace</option>
+	<option class="cursive" value="cursive">Cursive</option>
+	<option class="fantasy" value="fantasy">Fantasy</option>
+</select><br />
 
 <textarea id="enhavo" class="enhavo">Mi estas tre ĝoja konatiĝi kun vi.
 Kiel vi nomiĝas?
@@ -30,9 +40,13 @@ Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 <br />
 <span class="malgranda">Referenco: <a href="http://sukerasparo.com/sp004/font.html" target="_blank">ユリアーモフォント公開中 - ことのはアムリラート - sukerasparo</a></span>
 
-<br />
+<br /><br />
+<hr />
 
-<h4>Oficialaj Sistemoj</h4>
+<!-- sistemoj -->
+
+<details open="open">
+<summary>Oficialaj Sistemoj</summary>
 <p>
 <input type="checkbox" id="h_sistemo" checked="checked" /><label for="h_sistemo">H-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;ch &rarr; ĉ, gh &rarr; ĝ, hh &rarr; ĥ, jh &rarr; ĵ, sh &rarr; ŝ</span></label><br />
 
@@ -40,8 +54,12 @@ Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 
 <input type="checkbox" id="kareto_sistemo" /><label for="kareto_sistemo">^-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;c^ &rarr; ĉ, g^ &rarr; ĝ, h^ &rarr; ĥ, j^ &rarr; ĵ, s^ &rarr; ŝ, u^/u~/v^/v~/w^/w~ &rarr; ŭ</span></label><br />
 </p>
+</details>
 
-<h4>Neoficialaj Sistemoj</h4>
+<br />
+
+<details open="open">
+<summary>Neoficialaj Sistemoj</summary>
 <p>
 <input type="checkbox" id="plilongigita_h_sistemo" /><label for="plilongigita_h_sistemo">Plilongigita H-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;kh &rarr; ĥ, vh &rarr; ŭ</span></label><br />
 
@@ -57,25 +75,37 @@ Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 
 <input type="checkbox" id="y_sistemo" /><label for="y_sistemo">Y-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cy &rarr; ĉ, gy &rarr; ĝ, hy &rarr; ĥ, jy &rarr; ĵ, sy &rarr; ŝ, uy,vy,wy &rarr; ŭ</span></label><br />
 
-
-<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
-
-<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
-
 <input type="checkbox" id="angla_stila_sistemo" /><label for="angla_stila_sistemo">Angla-stila sistemo <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda griza">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, dg &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, j &rarr; ĵ, sh &rarr; ŝ, w &rarr; ŭ</span></label><br />
 
 <input type="checkbox" id="malregula_sistemo" /><label for="malregula_sistemo">Miksita sistemo 1<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cy &rarr; ĉ, xg &rarr; ĝ, xh &rarr; ĥ, xj &rarr; ĵ, sy &rarr; ŝ, w &rarr; ŭ</span></label><br />
 
 <input type="checkbox" id="malregula_sistemo_2" /><label for="malregula_sistemo_2">Miksita sistemo 2<br /><span class="malgranda griza">&emsp;&emsp;&emsp;cy &rarr; ĉ, xy &rarr; ĝ, q &rarr; ĥ, x &rarr; ĵ, sy &rarr; ŝ, w &rarr; ŭ</span></label><br />
 
-<input type="checkbox" id="nova_helpalfabeto" /><label for="nova_helpalfabeto">Nova Helpalfabeto <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda griza">&emsp;&emsp;&emsp;ts &rarr; c, tc &rarr; ĉ, dj &rarr; ĝ, x &rarr; ĥ, y &rarr; j, j &rarr; ĵ, c &rarr; ŝ, wa/we/wo &rarr; ŭa/ŭe/ŭo, au/eu/ou &rarr; aŭ/eŭ/oŭ</span></label><br />
+<input type="checkbox" id="nova_helpalfabeto" /><label for="nova_helpalfabeto">Nova Helpalfabeto <span class="oblikva">(ne konvertu dufoje)</span><br /><span class="malgranda griza">&emsp;&emsp;&emsp;ts &rarr; c, ch &rarr; ĉ, j &rarr; ĝ, kh &rarr; ĥ, y &rarr; j, zh &rarr; ĵ, sh &rarr; ŝ, wa/we/wo &rarr; ŭa/ŭe/ŭo, au/eu/ou &rarr; aŭ/eŭ/oŭ</span></label><br />
 </p>
-
-<input type="button" value="Malŝaltu ĉiujn" onclick="malsyaltuCyiujn()" />
+</details>
 
 <br />
+
+<details open="open">
+<summary>Neoficialaj Sistemoj (kun simboloj)</summary>
+<p>
+<input type="checkbox" id="pre_kareto_sistemo" /><label for="pre_kareto_sistemo">Prefala ^-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;^c &rarr; ĉ, ^g &rarr; ĝ, ^h &rarr; ĥ, ^j &rarr; ĵ, ^s &rarr; ŝ, ^u/~u/^v/~v/^w/~w &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="apostrophe_sistemo" /><label for="apostrophe_sistemo">'-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;c' &rarr; ĉ, g' &rarr; ĝ, h' &rarr; ĥ, j' &rarr; ĵ, s' &rarr; ŝ, u'/v'/w' &rarr; ŭ</span></label><br />
+
+<input type="checkbox" id="pre_apostrophe_sistemo" /><label for="pre_apostrophe_sistemo">Prefala '-sistemo<br /><span class="malgranda griza">&emsp;&emsp;&emsp;'c &rarr; ĉ, 'g &rarr; ĝ, 'h &rarr; ĥ, 'j &rarr; ĵ, 's &rarr; ŝ, 'u/'v/'w &rarr; ŭ</span></label><br />
+</p>
+</details>
+
+<br />
+
+<input type="button" value="Malŝaltu ĉiujn" onclick="malshaltuChiujn()" />
+
+<br />
+<hr />
+
+<!-- noto -->
 
 <p>Noto
 <table border="1" class="centro">
@@ -83,7 +113,7 @@ Adiaŭ, vidu vin la venonta ĵaŭdo!</textarea></p>
 		<th>Alfabeto</th><td>c</td><td>ĉ</td><td>g</td><td>ĝ</td><td>h</td><td>ĥ</td><td>j</td><td>ĵ</td><td>s</td><td>ŝ</td><td>u</td><td>ŭ</td>
 	</tr>
 	<tr>
-		<th>Prononco</th><td>[ts]</td><td>[tʃ]</td><td>[g]</td><td>[dʒ]</td><td>[h]</td><td>[x]</td><td>[j]</td><td>[ʒ]</td><td>[s]</td><td>[ʃ]</td><td>[u]</td><td>[w]</td>
+		<th>Prononco</th><td>[t͡s]</td><td>[t͡ʃ]</td><td>[g]</td><td>[d͡ʒ]</td><td>[h]</td><td>[x]</td><td>[j]</td><td>[ʒ]</td><td>[s]</td><td>[ʃ]</td><td>[u]</td><td>[w]</td>
 	</tr>
 </table>
 Ligilo : <a href="https://en.wikipedia.org/wiki/Esperanto_orthography" target="_blank">https://en.wikipedia.org/wiki/Esperanto_orthography</a>

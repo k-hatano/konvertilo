@@ -570,7 +570,7 @@ function katakanigo() {
 	if (reduktuDependantajn) {
 		enhavo = enhavo.replace(/[Ĉĉ]/g,'チュ');
 	} else {
-		enhavo = enhavo.replace(/[Ĉĉ]/g,'ツ゚ュ');
+		enhavo = enhavo.replace(/[Ĉĉ]/g,'チ゚');
 	}
 
 	enhavo = enhavo.replace(/[Dd][Aa]/g,'ダ');
@@ -946,6 +946,32 @@ function malshaltuChiujn() {
 	elemento('pre_apostrophe_sistemo').checked = false;
 	elemento('angla_stila_sistemo').checked = false;
 	elemento('malregula_sistemo').checked = false;
+
+	sistemoElectita();
 }
 
+function sistemoElectita() {
+	var electitaj = 0;
 
+	electitaj += elemento('anstatauigo').checked ? 1 : 0;
+	electitaj += elemento('grekaj').checked ? 1 : 0;
+	electitaj += elemento('h_sistemo').checked ? 1 : 0;
+	electitaj += elemento('x_sistemo').checked ? 1 : 0;
+	electitaj += elemento('plilongigita_h_sistemo').checked ? 1 : 0;
+	electitaj += elemento('pre_x_sistemo').checked ? 1 : 0;
+	electitaj += elemento('q_sistemo').checked ? 1 : 0;
+	electitaj += elemento('w_sistemo').checked ? 1 : 0;
+	electitaj += elemento('y_sistemo').checked ? 1 : 0;
+	electitaj += elemento('kareto_sistemo').checked ? 1 : 0;
+	electitaj += elemento('pre_kareto_sistemo').checked ? 1 : 0;
+	electitaj += elemento('apostrophe_sistemo').checked ? 1 : 0;
+	electitaj += elemento('pre_apostrophe_sistemo').checked ? 1 : 0;
+	electitaj += elemento('angla_stila_sistemo').checked ? 1 : 0;
+	electitaj += elemento('malregula_sistemo').checked ? 1 : 0;
+
+	if (electitaj == 1) {
+		elemento('sistemo_electita').innerHTML = "" + 1 + " sistemo elektita";
+	} else {
+		elemento('sistemo_electita').innerHTML = "" + electitaj + " sistemoj elektitaj";
+	}
+}

@@ -119,6 +119,7 @@ function konvertuAlEsperanto() {
 	var malregulaSistemo = elemento('malregula_sistemo').checked;
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
+	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
 
 	if (hSistemo) {
 		enhavo = enhavo.replace(/c[hH]/g,'ĉ').replace(/C[hH]/g,'Ĉ')
@@ -277,6 +278,15 @@ function konvertuAlEsperanto() {
 					   .replace(/Ou/g,'Oŭ').replace(/OU/g,'OŬ');   
 	}
 
+	if (pliGrandaSistemo) {
+		enhavo = enhavo.replace(/c>/g,'ĉ').replace(/C>/g,'Ĉ')
+					   .replace(/g>/g,'ĝ').replace(/G>/g,'Ĝ')
+					   .replace(/h>/g,'ĥ').replace(/H>/g,'Ĥ')
+					   .replace(/j>/g,'ĵ').replace(/J>/g,'Ĵ')
+					   .replace(/s>/g,'ŝ').replace(/S>/g,'Ŝ')
+					   .replace(/[uvw]>/g,'ŭ').replace(/[UVW]>/g,'Ŭ');
+	}
+
 	elemento('enhavo').value = enhavo;
 }
 
@@ -300,6 +310,7 @@ function konvertuAlAscii() {
 	var malregulaSistemo = elemento('malregula_sistemo').checked;
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
+	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
 
 	if (hSistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'ch').replace(/Ĉ/g,'Ch')
@@ -456,6 +467,15 @@ function konvertuAlAscii() {
 					   .replace(/Aŭ/g,'Au').replace(/AŬ/g,'AU')
 					   .replace(/Eŭ/g,'Eu').replace(/EŬ/g,'EU')
 					   .replace(/ŭO/g,'Ou').replace(/OŬ/g,'OU');
+	}
+
+	if (pliGrandaSistemo) {
+		enhavo = enhavo.replace(/ĉ/g,'c>').replace(/Ĉ/g,'C>')
+					   .replace(/ĝ/g,'g>').replace(/Ĝ/g,'G>')
+					   .replace(/ĥ/g,'h>').replace(/Ĥ/g,'H>')
+					   .replace(/ĵ/g,'j>').replace(/Ĵ/g,'J>')
+					   .replace(/ŝ/g,'s>').replace(/Ŝ/g,'S>')
+					   .replace(/ŭ/g,'u>').replace(/Ŭ/g,'U>');
 	}
 
 	elemento('enhavo').value = enhavo;
@@ -946,6 +966,9 @@ function malshaltuChiujn() {
 	elemento('pre_apostrophe_sistemo').checked = false;
 	elemento('angla_stila_sistemo').checked = false;
 	elemento('malregula_sistemo').checked = false;
+	elemento('malregula_sistemo_2').checked = false;
+	elemento('nova_helpalfabeto').checked = false;
+	elemento('pli_granda_sistemo').checked = false;
 
 	sistemoElectita();
 }
@@ -968,6 +991,9 @@ function sistemoElectita() {
 	electitaj += elemento('pre_apostrophe_sistemo').checked ? 1 : 0;
 	electitaj += elemento('angla_stila_sistemo').checked ? 1 : 0;
 	electitaj += elemento('malregula_sistemo').checked ? 1 : 0;
+	electitaj += elemento('malregula_sistemo_2').checked ? 1 : 0;
+	electitaj += elemento('nova_helpalfabeto').checked ? 1 : 0;
+	electitaj += elemento('pli_granda_sistemo').checked ? 1 : 0;
 
 	if (electitaj == 1) {
 		elemento('sistemo_electita').innerHTML = "" + 1 + " sistemo elektita";

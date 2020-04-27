@@ -71,7 +71,7 @@ function elemento(nomo) {
 }
 
 function hodiau() {
-	var rezulto = 'Hodiaŭ estas la ';
+	var rezulto = 'Ŭa, hodiaŭ estas la ';
 
 	var nun = new Date();
 	var monato = nun.getMonth() + 1;
@@ -103,6 +103,9 @@ function konvertuAlEsperanto() {
 	var enhavo = elemento('enhavo').value;
 
 	var anstatauigo = elemento('anstatauigo').checked;
+	var qtohh = elemento('qtohh').checked;
+	var xtogh = elemento('xtogh').checked;
+	var ytojh = elemento('ytojh').checked;
 	var grekaj = elemento('grekaj').checked;
 	var hSistemo = elemento('h_sistemo').checked;
 	var xSistemo = elemento('x_sistemo').checked;
@@ -120,6 +123,19 @@ function konvertuAlEsperanto() {
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
 	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
+
+	if (anstatauigo) {
+		enhavo = enhavo.replace(/w/g,'ŭ').replace(/W/g,'Ŭ');
+	}
+	if (qtohh) {
+		enhavo = enhavo.replace(/q/g,'ĥ').replace(/Q/g,'Ĥ');
+	}
+	if (xtogh) {
+		enhavo = enhavo.replace(/x/g,'ĝ').replace(/X/g,'Ĝ');
+	}
+	if (ytojh) {
+		enhavo = enhavo.replace(/y/g,'ĵ').replace(/Y/g,'Ĵ');
+	}
 
 	if (hSistemo) {
 		enhavo = enhavo.replace(/c[hH]/g,'ĉ').replace(/C[hH]/g,'Ĉ')
@@ -145,10 +161,6 @@ function konvertuAlEsperanto() {
 					   .replace(/j\^/g,'ĵ').replace(/J\^/g,'Ĵ')
 					   .replace(/s\^/g,'ŝ').replace(/S\^/g,'Ŝ')
 					   .replace(/[uvw][\^\~]/g,'ŭ').replace(/[UVW][\^\~]/g,'Ŭ');
-	}
-
-	if (anstatauigo) {
-		enhavo = enhavo.replace(/w/g,'ŭ').replace(/W/g,'Ŭ');
 	}
 
 	if (grekaj) {
@@ -294,6 +306,9 @@ function konvertuAlAscii() {
 	var enhavo = elemento('enhavo').value;
 
 	var anstatauigo = elemento('anstatauigo').checked;
+	var qtohh = elemento('qtohh').checked;
+	var xtogh = elemento('xtogh').checked;
+	var ytojh = elemento('ytojh').checked;
 	var grekaj = elemento('grekaj').checked;
 	var hSistemo = elemento('h_sistemo').checked;
 	var xSistemo = elemento('x_sistemo').checked;
@@ -311,6 +326,19 @@ function konvertuAlAscii() {
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
 	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
+
+	if (anstatauigo) {
+		enhavo = enhavo.replace(/ŭ/g,'w').replace(/Ŭ/g,'W');
+	}
+	if (qtohh) {
+		enhavo = enhavo.replace(/ĥ/g,'q').replace(/Ĥ/g,'Q');
+	}
+	if (xtogh) {
+		enhavo = enhavo.replace(/ĝ/g,'x').replace(/Ĝ/g,'X');
+	}
+	if (ytojh) {
+		enhavo = enhavo.replace(/ĵ/g,'y').replace(/Ĵ/g,'Y');
+	}
 
 	if (hSistemo) {
 		enhavo = enhavo.replace(/ĉ/g,'ch').replace(/Ĉ/g,'Ch')
@@ -336,10 +364,6 @@ function konvertuAlAscii() {
 					   .replace(/ĵ/g,'j^').replace(/Ĵ/g,'J^')
 					   .replace(/ŝ/g,'s^').replace(/Ŝ/g,'S^')
 					   .replace(/ŭ/g,'u~').replace(/Ŭ/g,'U~');
-	}
-
-	if (anstatauigo) {
-		enhavo = enhavo.replace(/ŭ/g,'w').replace(/Ŭ/g,'W');
 	}
 
 	if (grekaj) {
@@ -838,7 +862,7 @@ function katakanigo() {
 	enhavo = enhavo.replace(/\?/g,'？');
 	enhavo = enhavo.replace(/\!/g,'！');
 	enhavo = enhavo.replace(/\"/g,'”');
-	enhavo = enhavo.replace(/\'/g,'’');
+	enhavo = enhavo.replace(/\'/g,'゠');
 
 	enhavo = enhavo.replace(/\-/g,'ー');
 
@@ -952,6 +976,9 @@ function elektuTiparon(tiparo) {
 
 function malshaltuChiujn() {
 	elemento('anstatauigo').checked = false;
+	elemento('qtohh').checked = false;
+	elemento('xtogh').checked = false;
+	elemento('ytojh').checked = false;
 	elemento('grekaj').checked = false;
 	elemento('h_sistemo').checked = false;
 	elemento('x_sistemo').checked = false;
@@ -977,6 +1004,9 @@ function sistemoElectita() {
 	var electitaj = 0;
 
 	electitaj += elemento('anstatauigo').checked ? 1 : 0;
+	electitaj += elemento('qtohh').checked ? 1 : 0;
+	electitaj += elemento('xtogh').checked ? 1 : 0;
+	electitaj += elemento('ytojh').checked ? 1 : 0;
 	electitaj += elemento('grekaj').checked ? 1 : 0;
 	electitaj += elemento('h_sistemo').checked ? 1 : 0;
 	electitaj += elemento('x_sistemo').checked ? 1 : 0;

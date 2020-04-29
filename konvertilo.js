@@ -173,8 +173,8 @@ function konvertuAlEsperanto() {
 	}
 
 	if (plilongigitaHSistemo) {
-		enhavo = enhavo.replace(/k[hH]/g,'ĥ').replace(/K[xX]/g,'Ĥ')
-					   .replace(/v[hH]/g,'ŭ').replace(/V[xX]/g,'Ŭ');		   
+		enhavo = enhavo.replace(/k[hH]/g,'ĥ').replace(/K[hH]/g,'Ĥ')
+					   .replace(/v[hH]/g,'ŭ').replace(/V[hH]/g,'Ŭ');		   
 	}
 
 	if (preXSistemo) {

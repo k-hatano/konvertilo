@@ -122,6 +122,7 @@ function konvertuAlEsperanto() {
 	var anglaStilaSistemo = elemento('angla_stila_sistemo').checked;
 	var malregulaSistemo = elemento('malregula_sistemo').checked;
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
+	var malregulaSistemo3 = elemento('malregula_sistemo_3').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
 	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
 	var graveSistemo = elemento('grave_sistemo').checked;
@@ -280,6 +281,15 @@ function konvertuAlEsperanto() {
 					   .replace(/w/g,'ŭ').replace(/W/g,'Ŭ');
 	}
 
+	if (malregulaSistemo3) {
+		enhavo = enhavo.replace(/c[yY]/g,'ĉ').replace(/C[yY]/g,'Ĉ')
+					   .replace(/g[yY]/g,'ĝ').replace(/G[yY]/g,'Ĝ')
+					   .replace(/x/g,'ĥ').replace(/X/g,'Ĥ')
+					   .replace(/z[yY]/g,'ĵ').replace(/Z[yY]/g,'Ĵ')
+					   .replace(/s[yY]/g,'ŝ').replace(/S[yY]/g,'Ŝ')
+					   .replace(/w/g,'ŭ').replace(/W/g,'Ŭ');
+	}
+
 	if (novaHelpalfabeto) {
 		enhavo = enhavo.replace(/c[hH]/g,'ĉ').replace(/C[hH]/g,'Ĉ')
 					   .replace(/j/g,'ĝ').replace(/J/g,'Ĝ')
@@ -345,6 +355,7 @@ function konvertuAlAscii() {
 	var anglaStilaSistemo = elemento('angla_stila_sistemo').checked;
 	var malregulaSistemo = elemento('malregula_sistemo').checked;
 	var malregulaSistemo2 = elemento('malregula_sistemo_2').checked;
+	var malregulaSistemo3 = elemento('malregula_sistemo_3').checked;
 	var novaHelpalfabeto = elemento('nova_helpalfabeto').checked;
 	var pliGrandaSistemo = elemento('pli_granda_sistemo').checked;
 	var graveSistemo = elemento('grave_sistemo').checked;
@@ -499,6 +510,15 @@ function konvertuAlAscii() {
 					   .replace(/ĝ/g,'xy').replace(/Ĝ/g,'Xy')
 					   .replace(/ĥ/g,'q').replace(/Ĥ/g,'Q')
 					   .replace(/ĵ/g,'x').replace(/Ĵ/g,'X')
+					   .replace(/ŝ/g,'sy').replace(/Ŝ/g,'Sy')
+					   .replace(/ŭ/g,'w').replace(/Ŭ/g,'W');
+	}
+
+	if (malregulaSistemo3) {
+		enhavo = enhavo.replace(/ĉ/g,'cy').replace(/Ĉ/g,'Cy')
+					   .replace(/ĝ/g,'gy').replace(/Ĝ/g,'Gy')
+					   .replace(/ĥ/g,'x').replace(/Ĥ/g,'X')
+					   .replace(/ĵ/g,'zy').replace(/Ĵ/g,'Zy')
 					   .replace(/ŝ/g,'sy').replace(/Ŝ/g,'Sy')
 					   .replace(/ŭ/g,'w').replace(/Ŭ/g,'W');
 	}

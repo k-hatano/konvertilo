@@ -57,3 +57,7 @@ summary {
   font-family: 'juliamo';
   src: url('https://dl.dropboxusercontent.com/s/5me44aeb19mxm6e/juliamo.woff') format('woff');
 }
+
+a {
+	text-decoration-color: #888;
+}

@@ -1045,6 +1045,7 @@ function malshaltuChiujn() {
 	elemento('angla_stila_sistemo').checked = false;
 	elemento('malregula_sistemo').checked = false;
 	elemento('malregula_sistemo_2').checked = false;
+	elemento('malregula_sistemo_3').checked = false;
 	elemento('nova_helpalfabeto').checked = false;
 	elemento('pli_granda_sistemo').checked = false;
 	elemento('grave_sistemo').checked = false;
@@ -1075,6 +1076,7 @@ function sistemoElectita() {
 	electitaj += elemento('angla_stila_sistemo').checked ? 1 : 0;
 	electitaj += elemento('malregula_sistemo').checked ? 1 : 0;
 	electitaj += elemento('malregula_sistemo_2').checked ? 1 : 0;
+	electitaj += elemento('malregula_sistemo_3').checked ? 1 : 0;
 	electitaj += elemento('nova_helpalfabeto').checked ? 1 : 0;
 	electitaj += elemento('pli_granda_sistemo').checked ? 1 : 0;
 	electitaj += elemento('grave_sistemo').checked ? 1 : 0;
